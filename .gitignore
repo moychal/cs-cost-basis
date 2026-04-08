@@ -1,5 +1,2 @@
-3000.*
-scm.*
-skinport.*
-parser_output.*
-tmp.csv
+*.csv
+*.json
