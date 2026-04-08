@@ -1,3 +1,4 @@
+from collections import defaultdict
 import csv
 import datetime
 import json
@@ -37,7 +38,6 @@ skinport_price_parsed_sum = 0
 skinport_qty_parsed_sum = 0
 
 
-aggregated_data = {}
 @dataclass
 class CSV_Tail:
   csf_qty: int = 0
@@ -52,6 +52,7 @@ class CSV_Tail:
   total_cost: float = 0
   cost_basis: float = 0
 
+aggregated_data = defaultdict(CSV_Tail)
 
 def debug(str=None):
   if not DEBUG:
@@ -71,31 +72,30 @@ def convert_iso_str_to_seattle_str(iso_string_utc):
   return dt_seattle.strftime("%Y-%m-%d")
 
 # Open the file and parse the JSON data
-datas = []
+datas = {}
 for j in CSFLOAT_FILE_NAMES:
   with open(j, 'r') as file:
-    datas.append(json.load(file))
+    datas[j] = json.load(file)
 
 faileds = 0
 curr_parsed = 0
 debug("Parsing")
-for data in datas:
+for filename, data in datas.items():
   # Iterate through the data (assuming it's a list of transactions)
   total = data['count']
   data = data['trades']
+  transactions_parsed = 0
   for transaction in data:
-    # Check if the required keys exist
     if "contract" in transaction and "item" in transaction["contract"] and \
         "market_hash_name" in transaction["contract"]["item"] and \
         "price" in transaction["contract"]:
       curr_parsed += 1
+      transactions_parsed += 1
       if transaction["state"] != "verified":
         faileds += 1
         continue
 
       item_name = transaction["contract"]["item"]["market_hash_name"]
-      # Price is represented in cents already
-      price = transaction["contract"]["price"]
       date = convert_iso_str_to_seattle_str(transaction["accepted_at"])
 
       float_value = None if transaction["contract"]["item"]["is_commodity"] else transaction["contract"]["item"]["float_value"]
@@ -103,23 +103,17 @@ for data in datas:
 
       # Aggregate by item_name, date, float_value
       k = (item_name, date, float_value)
+      # Price is represented in cents already
+      price = transaction["contract"]["price"]
       csf_price_parsed_sum += price
       csf_qty_parsed_sum += 1
-      if k in aggregated_data:
-        val = aggregated_data[k]
-        val.csf_price = val.csf_price + price
-        val.csf_qty = val.csf_qty + 1
-      else:
-        aggregated_data[k] = CSV_Tail(csf_price=price, csf_qty=1)
-    else:
-        debug("missing keys")
-  if curr_parsed != len(data):
-      debug('length disrepancy, probably from failed trades')
-  else:
-      debug(f"{curr_parsed} parsed")
-debug(f"{total} expected per the API response")
+      aggregated_data[k].csf_price += price
+      aggregated_data[k].csf_qty += 1
+
+  assert transactions_parsed == len(data), f"Failed to parse {len(data) - transactions_parsed} trades from CSFloat API data in {filename}"
+  debug(f"{transactions_parsed}/{total} parsed from {filename}")
 assert total == curr_parsed
-debug(f"{curr_parsed} parsed - failed {faileds} = {curr_parsed - faileds} valid ")
+debug(f"Parsed {curr_parsed}/{total} trades from CSFloat API data across {len(datas)} files, of which we skipped {faileds} failed trades")
 
 ## Parse SCM and add those aggregates
 with open(SCM_FILE_NAME, mode='r', newline='') as file:
@@ -139,12 +133,8 @@ with open(SCM_FILE_NAME, mode='r', newline='') as file:
         scm_qty_parsed_sum += qty
 
         key =  (name, date, None)
-        if key not in aggregated_data:
-          aggregated_data[key] = CSV_Tail(scm_qty=qty, scm_price=price)
-        else:
-          val = aggregated_data[key]
-          val.scm_qty = val.scm_qty + qty
-          val.scm_price = val.scm_price + price
+        aggregated_data[key].scm_qty += qty
+        aggregated_data[key].scm_price += price
 
 ## Parse skinport
 # Open the file and parse the JSON data
@@ -169,12 +159,9 @@ for order in data['result']['orders']:
     k = (item_name, date, float_value)
     skinport_price_parsed_sum += price
     skinport_qty_parsed_sum += 1
-    if k in aggregated_data:
-      val = aggregated_data[k]
-      val.skinport_price = val.skinport_price + price
-      val.skinport_qty = val.skinport_qty + 1
-    else:
-      aggregated_data[k] = CSV_Tail(skinport_price=price, skinport_qty=1)
+    val = aggregated_data[k]
+    aggregated_data[k].skinport_price += price
+    aggregated_data[k].skinport_qty += 1
   if curr_parsed != len(data):
       debug('length disrepancy, probably from failed trades')
   else:
@@ -207,8 +194,7 @@ scm_qty_sum = 0
 skinport_sum = 0
 skinport_qty_sum = 0
 # Print CSV
-debug()
-debug("Printing CSV")
+debug("\nPrinting CSV")
 print("Name, Date, Float, CSF Qty, CSF Price, Stripe fee, SCM Qty, SCM Price, Skinport Qty, Skinport Price, Subtotal, Sales Tax, Total Cost, Cost Basis")
 # Sort by name then date
 for (item_name, date, float_val), tail in sorted(aggregated_data.items(), key = lambda x: (x[0], x[1])):
@@ -227,9 +213,8 @@ for (item_name, date, float_val), tail in sorted(aggregated_data.items(), key = 
   # Write data
   print(f"{item_name},{date},{float_val},{tail.csf_qty},{tail.csf_price / 100},{tail.stripe_fee / 100},{tail.scm_qty},{tail.scm_price / 100},{tail.skinport_qty}, {tail.skinport_price / 100},{tail.subtotal / 100},{tail.sales_tax / 100},{tail.total_cost / 100},{tail.cost_basis / 100}")
 
-debug()
 
-debug(f"CSF sum: ${csf_sum / 100}, CSF qty: {csf_qty_sum}, SCM sum: ${scm_sum / 100}, SCM qty: {scm_qty_sum}, Skinport sum: ${skinport_sum / 100}, Skinport qty: {skinport_qty_sum}")
+debug(f"\nCSF sum: ${csf_sum / 100}, CSF qty: {csf_qty_sum}, SCM sum: ${scm_sum / 100}, SCM qty: {scm_qty_sum}, Skinport sum: ${skinport_sum / 100}, Skinport qty: {skinport_qty_sum}")
 assert csf_sum == csf_price_parsed_sum
 assert csf_qty_sum == csf_qty_parsed_sum
 assert scm_sum == scm_price_parsed_sum
