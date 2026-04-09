@@ -181,12 +181,11 @@ def parse_skinport_data(aggregated_data, skinport_files) -> defaultdict:
 # should actually write to csv
 def write_csv(aggregated_data, output_file='output.csv'):
   # Print CSV
-  debug("\nPrinting CSV\n")
+  debug("\nPrinting CSV")
   with open(output_file, 'w', encoding='utf-8') as file:
     writer = csv.writer(file)
 
     header = ["Name", "Date", "Float", "CSF Qty", "CSF Price", "Stripe fee", "SCM Qty", "SCM Price", "Skinport Qty", "Skinport Price", "Subtotal", "Sales Tax", "Total Cost", "Cost Basis"]
-    debug(', '.join(header))
     writer.writerow(header)
 
     # For summary rows
@@ -219,10 +218,11 @@ def write_csv(aggregated_data, output_file='output.csv'):
       # Write data
       row = [item_name, date, float_val, tail.csf_qty, tail.csf_price / 100, tail.stripe_fee / 100, tail.scm_qty, tail.scm_price / 100, tail.skinport_qty, tail.skinport_price / 100, tail.subtotal / 100, tail.sales_tax / 100, tail.total_cost / 100, tail.cost_basis / 100]
       row = [str(x) for x in row] # writes 'None' for float values for commodities
-      debug(','.join(row))
       writer.writerow(row)
 
-  debug(f"\nCSF sum: ${csf_sum / 100}, CSF qty: {csf_qty_sum}, SCM sum: ${scm_sum / 100}, SCM qty: {scm_qty_sum}, Skinport sum: ${skinport_sum / 100}, Skinport qty: {skinport_qty_sum}")
+  debug(f"CSV written to {output_file}")
+  debug("\n[Summary]")
+  debug(f"CSF sum: ${csf_sum / 100}, CSF qty: {csf_qty_sum}, SCM sum: ${scm_sum / 100}, SCM qty: {scm_qty_sum}, Skinport sum: ${skinport_sum / 100}, Skinport qty: {skinport_qty_sum}")
   debug(f"Total qty in CSV: {recount}, Subtotal: ${subtotal_sum / 100}, Total cost: ${(cost_sum) / 100}")
   debug(f"Total fees: ${(stripe_fee_sum + sales_tax_sum) / 100}, Stripe fees: ${stripe_fee_sum / 100}, Sales tax: ${sales_tax_sum / 100}")
 
