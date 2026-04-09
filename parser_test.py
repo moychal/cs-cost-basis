@@ -13,7 +13,7 @@ class TestParser(unittest.TestCase):
             expected = f.read()
 
         self.maxDiff = None
-        self.assertEqual(proc.stdout, expected, msg='parser.py stdout did not match expected_output.txt')
+        self.assertEqual(proc.stdout, expected, msg='parser.py stdout did not match expected_stdout.txt')
 
     def test_csv_matches(self):
         proc = subprocess.run([sys.executable, 'parser.py'], capture_output=True, text=True, timeout=60)

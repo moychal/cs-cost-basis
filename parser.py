@@ -227,6 +227,30 @@ def write_csv(aggregated_data, output_file='output.csv'):
   debug(f"Total fees: ${(stripe_fee_sum + sales_tax_sum) / 100}, Stripe fees: ${stripe_fee_sum / 100}, Sales tax: ${sales_tax_sum / 100}")
 
 
+def write_summary_csv(aggregated_data, output_file='summary_output.csv'):
+  debug("\nPrinting summary CSV")
+  summary = {}
+  for (item_name, _, _), tail in aggregated_data.items():
+    summary[item_name] = summary.get(item_name, CSV_Tail())
+    summary[item_name].csf_qty += tail.csf_qty
+    summary[item_name].csf_price += tail.csf_price
+    summary[item_name].scm_qty += tail.scm_qty
+    summary[item_name].scm_price += tail.scm_price
+    summary[item_name].skinport_qty += tail.skinport_qty
+    summary[item_name].skinport_price += tail.skinport_price
+  
+  with open(output_file, 'w', encoding='utf-8') as file:
+    writer = csv.writer(file)
+
+    header = ["Name", "Total Qty", "Subtotal", "Pre-fee cost basis", "Stripe Fee", "Sales Tax", "Total Cost", "Cost Basis"]
+    writer.writerow(header)
+
+    for item_name, tail in sorted(summary.items(), key = lambda x: (x[1].total_cost)):
+      row = [item_name, tail.total_qty, tail.subtotal / 100, tail.subtotal / tail.total_qty / 100, tail.stripe_fee / 100, tail.sales_tax / 100, tail.total_cost / 100, tail.cost_basis / 100]
+      writer.writerow(row)
+
+  debug(f"Aggregate CSV written to {output_file}")
+
 
 if __name__ == "__main__":
   CSFLOAT_FILE_NAMES = sorted(glob.glob(os.path.join(DATA_DIR, 'csfloat', '*.json')))
@@ -247,3 +271,4 @@ if __name__ == "__main__":
   parse_scm_data(aggregated_data, SCM_FILE_NAMES)
   parse_skinport_data(aggregated_data, SKINPORT_FILE_NAMES)
   write_csv(aggregated_data)
+  write_summary_csv(aggregated_data)
