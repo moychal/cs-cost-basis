@@ -9,7 +9,9 @@
 - Reference the downloads in parser.py and run
 
 # TODO
+- support variable sales tax by year
 - fix test data, currently it only works with my trades, which I .gitignored
 - scrub trade_url, trade_token, username, steam_id from both buyer and sellers in csfloat jsons
+- easier way to pull data, extensions?
 - calculate p/l of sales
 - maybe a UI and how/to with videos
