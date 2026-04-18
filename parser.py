@@ -19,6 +19,7 @@ from dataclasses import dataclass
 #   - Place downloaded JSON in data/skinport/
 
 # Constants
+IGNORE_FEES = True
 STRIPE_FEE = .0288
 SALES_TAX = .1035
 PURCHASE_TIME_ZONE = 'America/Los_Angeles' # Seattle
@@ -60,7 +61,12 @@ class CSV_Tail:
   
   @property
   def cost_basis(self):
-    return self.total_cost / self.total_qty if self.total_qty > 0 else 0
+    if self.total_qty > 0:
+      if IGNORE_FEES:
+        return self.subtotal / self.total_qty
+      else:
+        return self.total_cost / self.total_qty
+    return 0
 
 
 def debug(str=None):
@@ -251,6 +257,21 @@ def write_summary_csv(aggregated_data, output_file='summary_output.csv'):
 
   debug(f"Aggregate CSV written to {output_file}")
 
+def write_casemove_csv(aggregated_data, output_file='casemove.csv'):
+    debug("\nPrinting casemove CSV")
+    
+    with open(output_file, 'w', encoding='utf-8') as file:
+      writer = csv.writer(file)
+
+      header = ["Name", "Date", "Quantity", "Price", "Type", "Note", "Currency"]
+      writer.writerow(header)
+
+      for (item_name, date, float_value), tail in sorted(aggregated_data.items(), key = lambda x: (x[1].total_cost)):
+        row = [item_name, date, tail.total_qty, tail.cost_basis / 100, '', 'From script', 'USD']
+        writer.writerow(row)
+
+    debug(f"Casemove CSV written to {output_file}")
+
 
 if __name__ == "__main__":
   CSFLOAT_FILE_NAMES = sorted(glob.glob(os.path.join(DATA_DIR, 'csfloat', '*.json')))
@@ -272,3 +293,4 @@ if __name__ == "__main__":
   parse_skinport_data(aggregated_data, SKINPORT_FILE_NAMES)
   write_csv(aggregated_data)
   write_summary_csv(aggregated_data)
+  write_casemove_csv(aggregated_data)
