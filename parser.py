@@ -19,7 +19,7 @@ from dataclasses import dataclass
 #   - Place downloaded JSON in data/skinport/
 
 # Constants
-IGNORE_FEES = True
+IGNORE_FEES = False
 STRIPE_FEE = .0288
 SALES_TAX = .1035
 PURCHASE_TIME_ZONE = 'America/Los_Angeles' # Seattle
@@ -181,7 +181,7 @@ def parse_skinport_data(aggregated_data, skinport_files) -> defaultdict:
           aggregated_data[k].skinport_qty += 1
       debug(f"{curr_parsed}/{expected_parsed} parsed from {skinport_file}")
   assert expected_parsed == curr_parsed
-  debug(f"Parsed {curr_parsed}/{expected_parsed} from Skinport API data across {len(SKINPORT_FILE_NAMES)} files")
+  debug(f"Parsed {curr_parsed}/{expected_parsed} from Skinport API data across {len(skinport_files)} files")
   return aggregated_data
 
 # should actually write to csv
@@ -273,24 +273,28 @@ def write_casemove_csv(aggregated_data, output_file='casemove.csv'):
     debug(f"Casemove CSV written to {output_file}")
 
 
-if __name__ == "__main__":
-  CSFLOAT_FILE_NAMES = sorted(glob.glob(os.path.join(DATA_DIR, 'csfloat', '*.json')))
-  SCM_FILE_NAMES = sorted(glob.glob(os.path.join(DATA_DIR, 'scm', '*.csv')))
-  SKINPORT_FILE_NAMES = sorted(glob.glob(os.path.join(DATA_DIR, 'skinport', '*.json')))
+def runner(input_file_dir):
+  csf_file_names = sorted(glob.glob(os.path.join(input_file_dir, 'csfloat', '*.json')))
+  scm_file_names = sorted(glob.glob(os.path.join(input_file_dir, 'scm', '*.csv')))
+  skinport_file_names = sorted(glob.glob(os.path.join(input_file_dir, 'skinport', '*.json')))
 
-  if CSFLOAT_FILE_NAMES:
-    debug(f"Discovered CSFloat files: {CSFLOAT_FILE_NAMES}")
-  if SCM_FILE_NAMES:
-    debug(f"Discovered SCM files: {SCM_FILE_NAMES}")
-  if SKINPORT_FILE_NAMES:
-    debug(f"Discovered Skinport files: {SKINPORT_FILE_NAMES}")
-  assert CSFLOAT_FILE_NAMES or SCM_FILE_NAMES or SKINPORT_FILE_NAMES, f"No files found, please place files in {DATA_DIR}/csfloat/, {DATA_DIR}/scm/, or {DATA_DIR}/skinport/"
+  if csf_file_names:
+    debug(f"Discovered CSFloat files: {csf_file_names}")
+  if scm_file_names:
+    debug(f"Discovered SCM files: {scm_file_names}")
+  if skinport_file_names:
+    debug(f"Discovered Skinport files: {skinport_file_names}")
+  assert csf_file_names or scm_file_names or skinport_file_names, f"No files found, please place files in {DATA_DIR}/csfloat/, {DATA_DIR}/scm/, or {DATA_DIR}/skinport/"
 
   aggregated_data = defaultdict(CSV_Tail)
 
-  parse_csfloat_data(aggregated_data, CSFLOAT_FILE_NAMES)
-  parse_scm_data(aggregated_data, SCM_FILE_NAMES)
-  parse_skinport_data(aggregated_data, SKINPORT_FILE_NAMES)
+  parse_csfloat_data(aggregated_data, csf_file_names)
+  parse_scm_data(aggregated_data, scm_file_names)
+  parse_skinport_data(aggregated_data, skinport_file_names)
   write_csv(aggregated_data)
   write_summary_csv(aggregated_data)
-  write_casemove_csv(aggregated_data)
+  # write_casemove_csv(aggregated_data)
+
+
+if __name__ == "__main__":
+  runner(DATA_DIR)

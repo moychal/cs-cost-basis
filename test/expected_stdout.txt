@@ -1,0 +1,25 @@
+Discovered CSFloat files: ['test/csfloat/test_page0_trades.json']
+Discovered SCM files: ['test/scm/scm_purchase_25.csv']
+Discovered Skinport files: ['test/skinport/skinport_trades.json']
+
+Parsing CSFloat data
+26/26 parsed from test/csfloat/test_page0_trades.json
+Parsed 26/26 trades from CSFloat API data across 1 files, of which 0 failed trades were not included
+
+Parsing SCM
+10 parsed from test/scm/scm_purchase_25.csv
+
+Parsing skinport
+7/7 parsed from test/skinport/skinport_trades.json
+Parsed 7/7 from Skinport API data across 1 files
+
+Printing CSV
+CSV written to output.csv
+
+[Summary]
+CSF sum: $7711.13, CSF qty: 26, SCM sum: $11.01, SCM qty: 10, Skinport sum: $24.35, Skinport qty: 7
+Total qty in CSV: 43, Subtotal: $7746.49, Total cost: $8770.332259000003
+Total fees: $1023.842259, Stripe fees: $222.08054400000003, Sales tax: $801.761715
+
+Printing summary CSV
+Aggregate CSV written to summary_output.csv

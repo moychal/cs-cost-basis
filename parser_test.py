@@ -1,23 +1,32 @@
+import io
 import unittest
-import subprocess
-import sys
+from contextlib import redirect_stdout
+
+import parser
 
 
+TEST_DIR = 'test'
+
+# Snapshot tests
 class TestParser(unittest.TestCase):
     # Should add tests for file discovery and progress and summary stats
+    def _run(self):
+        buf = io.StringIO()
+        with redirect_stdout(buf):
+            parser.runner(TEST_DIR)
+        return buf.getvalue()
+
     def test_stdout_matches(self):
-        proc = subprocess.run([sys.executable, 'parser.py'], capture_output=True, text=True, timeout=60)
-        self.assertEqual(proc.returncode, 0, msg=f"parser.py exited with {proc.returncode}, stderr:\n{proc.stderr}")
-        
+        stdout = self._run()
+
         with open('test/expected_stdout.txt', 'r', encoding='utf-8') as f:
             expected = f.read()
 
         self.maxDiff = None
-        self.assertEqual(proc.stdout, expected, msg='parser.py stdout did not match expected_stdout.txt')
+        self.assertEqual(stdout, expected, msg='runner stdout did not match expected_stdout.txt')
 
     def test_csv_matches(self):
-        proc = subprocess.run([sys.executable, 'parser.py'], capture_output=True, text=True, timeout=60)
-        self.assertEqual(proc.returncode, 0, msg=f"parser.py exited with {proc.returncode}, stderr:\n{proc.stderr}")
+        self._run()
 
         self.maxDiff = None
         with open('output.csv', 'r', encoding='utf-8') as f:

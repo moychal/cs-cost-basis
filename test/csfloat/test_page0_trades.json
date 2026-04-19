@@ -1,0 +1,3133 @@
+{
+    "trades": [
+        {
+            "id": "975773639367834695",
+            "created_at": "2025-06-02T22:41:58.365011Z",
+            "buyer_id": "76561190000000001",
+            "buyer": {
+                "avatar": "https://avatars.steamstatic.com/dummy_avatar_000_full.jpg",
+                "away": false,
+                "flags": 48,
+                "online": false,
+                "stall_public": false,
+                "statistics": {
+                    "median_trade_time": 0,
+                    "total_avoided_trades": 0,
+                    "total_failed_trades": 0,
+                    "total_trades": 0,
+                    "total_verified_trades": 0
+                },
+                "steam_id": "76561190000000001",
+                "username": "buyer_user"
+            },
+            "seller_id": "76561198000000001",
+            "seller": {
+                "avatar": "https://avatars.steamstatic.com/dummy_avatar_001_full.jpg",
+                "away": false,
+                "flags": 48,
+                "online": false,
+                "stall_public": false,
+                "statistics": {
+                    "median_trade_time": 3342,
+                    "total_avoided_trades": 0,
+                    "total_failed_trades": 0,
+                    "total_trades": 82,
+                    "total_verified_trades": 82
+                },
+                "steam_id": "76561198000000001",
+                "username": "seller_001"
+            },
+            "contract_id": "747303121869668569",
+            "accepted_at": "2025-03-24T09:36:35.811079Z",
+            "state": "verified",
+            "verification_mode": "escrow",
+            "steam_offer": {
+                "id": "1099001117",
+                "state": 3,
+                "is_from_seller": false,
+                "can_cancel_at": "2025-09-12T00:15:00.596302Z",
+                "sent_at": "2024-09-01T02:39:29.013071Z",
+                "deadline_at": "2025-09-09T19:28:08.982378Z",
+                "updated_at": "2025-04-19T10:00:40Z"
+            },
+            "verify_sale_at": "2024-09-16T02:36:18Z",
+            "verified_at": "2024-12-01T16:12:31.599899Z",
+            "inventory_check_status": 1,
+            "trade_protection_ends_at": "2025-09-05T22:38:18Z",
+            "contract": {
+                "id": "747303121869668569",
+                "created_at": "2024-06-26T17:14:24.576307Z",
+                "type": "buy_now",
+                "price": 241368,
+                "state": "sold",
+                "seller": {
+                    "away": false,
+                    "flags": 48,
+                    "obfuscated_id": "17568295570474884773",
+                    "online": false,
+                    "stall_public": false,
+                    "statistics": {
+                        "median_trade_time": 3342,
+                        "total_avoided_trades": 0,
+                        "total_failed_trades": 0,
+                        "total_trades": 82,
+                        "total_verified_trades": 82
+                    }
+                },
+                "reference": {
+                    "base_price": 110882,
+                    "float_factor": 1.204069,
+                    "predicted_price": 133510,
+                    "quantity": 196,
+                    "last_updated": "2025-03-09T16:57:16.837176Z"
+                },
+                "item": {
+                    "asset_id": "52799304520",
+                    "def_index": 16,
+                    "paint_index": 1255,
+                    "paint_seed": 395,
+                    "float_value": 0.01751287654042244,
+                    "icon_url": "JWt6CS-DdYNqpQNIZbQO_Vnz977tnoCiMbw9UZW65l9YnRvYtdAF7f06_C8lMcqTftWVR-rrJxqCjSJdF3ufduLMPOCoctZTUsWoyFATqMrGKpZm75bra2dvEEpIRYAz6Pi72-9h6J62afCqAmFy0XbaeA92MbFjhza419gbb8iTtoS_4X_BXl6N5B8Zh-",
+                    "d_param": "70669703545245833118",
+                    "is_stattrak": false,
+                    "is_souvenir": false,
+                    "rarity": 6,
+                    "quality": 4,
+                    "market_hash_name": "M4A4 | Eye of Horus (Factory New)",
+                    "low_rank": 177,
+                    "tradable": 0,
+                    "inspect_link": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2062A4719297CCA44BCE2B2A0C1318996F1CB53BFEB34554",
+                    "cs2_screenshot_id": "1236655503894865135",
+                    "cs2_screenshot_at": "2024-01-17T07:56:45.461335Z",
+                    "is_commodity": false,
+                    "type": "skin",
+                    "rarity_name": "Covert",
+                    "type_name": "Skin",
+                    "item_name": "M4A4 | Eye of Horus",
+                    "wear_name": "Factory New",
+                    "description": "It has been custom painted with a white base, gold accents, and the Egyptian falcon god Horus.\\n\\n<i>Rise above the rest</i>",
+                    "collection": "The Anubis Collection",
+                    "serialized_inspect": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2062A4719297CCA44BCE2B2A0C1318996F1CB53BFEB34554",
+                    "gs_sig": "13b64c7967b2661549b4"
+                },
+                "is_seller": false,
+                "min_offer_price": 213845,
+                "max_offer_discount": 800,
+                "is_watchlisted": false,
+                "watchers": 0,
+                "sold_at": "2024-03-18T23:40:35.652619Z"
+            },
+            "trade_url": "https://steamcommunity.com/tradeoffer/new/?partner=00000000&token=XXXXXXXX",
+            "trade_token": "XXXXXXXX",
+            "wait_for_cancel_ping": false,
+            "is_settlement_period": true
+        },
+        {
+            "id": "316111393409076400",
+            "created_at": "2025-03-19T08:22:23.245793Z",
+            "buyer_id": "76561190000000001",
+            "buyer": {
+                "avatar": "https://avatars.steamstatic.com/dummy_avatar_000_full.jpg",
+                "away": false,
+                "flags": 48,
+                "online": false,
+                "stall_public": false,
+                "statistics": {
+                    "median_trade_time": 0,
+                    "total_avoided_trades": 0,
+                    "total_failed_trades": 0,
+                    "total_trades": 0,
+                    "total_verified_trades": 0
+                },
+                "steam_id": "76561190000000001",
+                "username": "buyer_user"
+            },
+            "seller_id": "76561198000000002",
+            "seller": {
+                "avatar": "https://avatars.steamstatic.com/dummy_avatar_002_full.jpg",
+                "away": false,
+                "flags": 48,
+                "online": false,
+                "stall_public": true,
+                "statistics": {
+                    "median_trade_time": 62,
+                    "total_avoided_trades": 0,
+                    "total_failed_trades": 0,
+                    "total_trades": 1032,
+                    "total_verified_trades": 1032
+                },
+                "steam_id": "76561198000000002",
+                "username": "seller_002"
+            },
+            "contract_id": "320099995506318253",
+            "accepted_at": "2024-09-23T18:24:54.961958Z",
+            "state": "verified",
+            "verification_mode": "escrow",
+            "steam_offer": {
+                "id": "5937706894",
+                "state": 3,
+                "is_from_seller": false,
+                "can_cancel_at": "2024-11-06T03:32:27.240445Z",
+                "sent_at": "2024-12-13T08:59:36.800987Z",
+                "deadline_at": "2025-05-06T15:49:45.075487Z"
+            },
+            "verify_sale_at": "2025-09-05T22:38:18Z",
+            "verified_at": "2024-06-30T10:21:19.004502Z",
+            "inventory_check_status": 1,
+            "trade_protection_ends_at": "2025-07-02T17:42:39Z",
+            "contract": {
+                "id": "320099995506318253",
+                "created_at": "2025-07-12T01:23:14.542800Z",
+                "type": "buy_now",
+                "price": 246867,
+                "state": "sold",
+                "seller": {
+                    "avatar": "https://avatars.steamstatic.com/c6893e82a7a8bab34606d0183f637cc7a5a474a5_full.jpg",
+                    "away": false,
+                    "flags": 48,
+                    "online": false,
+                    "stall_public": true,
+                    "statistics": {
+                        "median_trade_time": 62,
+                        "total_avoided_trades": 0,
+                        "total_failed_trades": 0,
+                        "total_trades": 1032,
+                        "total_verified_trades": 1032
+                    },
+                    "steam_id": "76561198000000002",
+                    "username": "yam"
+                },
+                "reference": {
+                    "base_price": 110882,
+                    "float_factor": 1.0044924,
+                    "predicted_price": 111380,
+                    "quantity": 196,
+                    "last_updated": "2024-05-22T14:08:28.422367Z"
+                },
+                "item": {
+                    "asset_id": "57521063022",
+                    "def_index": 16,
+                    "paint_index": 1255,
+                    "paint_seed": 976,
+                    "float_value": 0.060182828456163406,
+                    "icon_url": "JWt6CS-DdYNqpQNIZbQO_Vnz977tnoCiMbw9UZW65l9YnRvYtdAF7f06_C8lMcqTftWVR-rrJxqCjSJdF3ufduLMPOCoctZTUsWoyFATqMrGKpZm75bra2dvEEpIRYAz6Pi72-9h6J62afCqAmFy0XbaeA92MbFjhza419gbb8iTtoS_4X_BXl6N5B8Zh-",
+                    "d_param": "83377524816976450288",
+                    "is_stattrak": false,
+                    "is_souvenir": false,
+                    "rarity": 6,
+                    "quality": 4,
+                    "market_hash_name": "M4A4 | Eye of Horus (Factory New)",
+                    "stickers": [
+                        {
+                            "stickerId": 6967,
+                            "slot": 0,
+                            "icon_url": "euL28TKe32iljaCVG-YG3jPXKcOVfEC6NsOgbpr1G29zIOuW5fnM-UgVi8yU1d8cHC8_tvFqOuKhXowKRhQBsM6fs05sHj_Q0Uh6f01IvcpkgXDlUwRnw1xy2Rvu1VWUmwcOxh7eaIOW4JTjeZxQSUKUHUDJ6oNzM_2XKNBkW3kyVHT4S1deUTOITbB85yuWofuGVWOa63pFHN0Z4x_3PyzFem1AGMohogZij-",
+                            "name": "Sticker | NEOFRAG (Holo) | Paris 2023",
+                            "reference": {
+                                "price": 16,
+                                "quantity": 160,
+                                "updated_at": "2024-01-11T01:27:46.244036Z"
+                            }
+                        },
+                        {
+                            "stickerId": 6967,
+                            "slot": 1,
+                            "icon_url": "euL28TKe32iljaCVG-YG3jPXKcOVfEC6NsOgbpr1G29zIOuW5fnM-UgVi8yU1d8cHC8_tvFqOuKhXowKRhQBsM6fs05sHj_Q0Uh6f01IvcpkgXDlUwRnw1xy2Rvu1VWUmwcOxh7eaIOW4JTjeZxQSUKUHUDJ6oNzM_2XKNBkW3kyVHT4S1deUTOITbB85yuWofuGVWOa63pFHN0Z4x_3PyzFem1AGMohogZij-",
+                            "name": "Sticker | NEOFRAG (Holo) | Paris 2023",
+                            "reference": {
+                                "price": 16,
+                                "quantity": 160,
+                                "updated_at": "2024-01-11T01:27:46.244036Z"
+                            }
+                        },
+                        {
+                            "stickerId": 6967,
+                            "slot": 2,
+                            "icon_url": "euL28TKe32iljaCVG-YG3jPXKcOVfEC6NsOgbpr1G29zIOuW5fnM-UgVi8yU1d8cHC8_tvFqOuKhXowKRhQBsM6fs05sHj_Q0Uh6f01IvcpkgXDlUwRnw1xy2Rvu1VWUmwcOxh7eaIOW4JTjeZxQSUKUHUDJ6oNzM_2XKNBkW3kyVHT4S1deUTOITbB85yuWofuGVWOa63pFHN0Z4x_3PyzFem1AGMohogZij-",
+                            "name": "Sticker | NEOFRAG (Holo) | Paris 2023",
+                            "reference": {
+                                "price": 16,
+                                "quantity": 160,
+                                "updated_at": "2024-01-11T01:27:46.244036Z"
+                            }
+                        },
+                        {
+                            "stickerId": 6967,
+                            "slot": 3,
+                            "icon_url": "euL28TKe32iljaCVG-YG3jPXKcOVfEC6NsOgbpr1G29zIOuW5fnM-UgVi8yU1d8cHC8_tvFqOuKhXowKRhQBsM6fs05sHj_Q0Uh6f01IvcpkgXDlUwRnw1xy2Rvu1VWUmwcOxh7eaIOW4JTjeZxQSUKUHUDJ6oNzM_2XKNBkW3kyVHT4S1deUTOITbB85yuWofuGVWOa63pFHN0Z4x_3PyzFem1AGMohogZij-",
+                            "name": "Sticker | NEOFRAG (Holo) | Paris 2023",
+                            "reference": {
+                                "price": 16,
+                                "quantity": 160,
+                                "updated_at": "2024-01-11T01:27:46.244036Z"
+                            }
+                        }
+                    ],
+                    "tradable": 0,
+                    "inspect_link": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20S76561198000000002A57521063022D83377524816976450288",
+                    "cs2_screenshot_id": "7537042556230825599",
+                    "cs2_screenshot_at": "2024-03-09T21:36:47.136707Z",
+                    "is_commodity": false,
+                    "type": "skin",
+                    "rarity_name": "Covert",
+                    "type_name": "Skin",
+                    "item_name": "M4A4 | Eye of Horus",
+                    "wear_name": "Factory New",
+                    "description": "It has been custom painted with a white base, gold accents, and the Egyptian falcon god Horus.\\n\\n<i>Rise above the rest</i>",
+                    "collection": "The Anubis Collection",
+                    "serialized_inspect": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20F503B3EA633E9B4CD510167AA81AD5277B00D3D9E02C12DD665E1CE2330BBDEA3C30C5BEEE09751C414D4A40EDF3DB1AE442BBD387D11608150E09636A48572EC273F810B2DC88",
+                    "gs_sig": "137cebd62da925c332ba"
+                },
+                "is_seller": false,
+                "min_offer_price": 204117,
+                "max_offer_discount": 1000,
+                "is_watchlisted": false,
+                "watchers": 0,
+                "sold_at": "2025-12-28T23:03:10.480805Z"
+            },
+            "trade_url": "https://steamcommunity.com/tradeoffer/new/?partner=00000000&token=XXXXXXXX",
+            "trade_token": "XXXXXXXX",
+            "wait_for_cancel_ping": false,
+            "is_settlement_period": true
+        },
+        {
+            "id": "775972512739144747",
+            "created_at": "2024-12-11T21:01:05.665054Z",
+            "buyer_id": "76561190000000001",
+            "buyer": {
+                "avatar": "https://avatars.steamstatic.com/dummy_avatar_000_full.jpg",
+                "away": false,
+                "flags": 48,
+                "online": false,
+                "stall_public": false,
+                "statistics": {
+                    "median_trade_time": 0,
+                    "total_avoided_trades": 0,
+                    "total_failed_trades": 0,
+                    "total_trades": 0,
+                    "total_verified_trades": 0
+                },
+                "steam_id": "76561190000000001",
+                "username": "buyer_user"
+            },
+            "seller_id": "76561198000000003",
+            "seller": {
+                "avatar": "https://avatars.steamstatic.com/dummy_avatar_003_full.jpg",
+                "away": false,
+                "flags": 48,
+                "online": false,
+                "stall_public": false,
+                "statistics": {
+                    "median_trade_time": 232,
+                    "total_avoided_trades": 0,
+                    "total_failed_trades": 0,
+                    "total_trades": 7,
+                    "total_verified_trades": 7
+                },
+                "steam_id": "76561198000000003",
+                "username": "seller_003"
+            },
+            "contract_id": "348069249892891585",
+            "accepted_at": "2025-07-28T03:19:32.309968Z",
+            "state": "verified",
+            "verification_mode": "escrow",
+            "steam_offer": {
+                "id": "5487325269",
+                "state": 3,
+                "is_from_seller": false,
+                "can_cancel_at": "2025-01-27T13:20:34.294704Z",
+                "sent_at": "2025-10-10T04:20:18.511053Z",
+                "deadline_at": "2025-04-27T19:23:22.652233Z",
+                "updated_at": "2025-07-03T14:09:22Z"
+            },
+            "verify_sale_at": "2024-04-16T11:03:35Z",
+            "verified_at": "2025-04-19T04:04:57.227730Z",
+            "inventory_check_status": 1,
+            "trade_protection_ends_at": "2024-10-28T15:10:13Z",
+            "contract": {
+                "id": "348069249892891585",
+                "created_at": "2024-04-22T09:30:42.145497Z",
+                "type": "buy_now",
+                "price": 76882,
+                "state": "sold",
+                "seller": {
+                    "away": false,
+                    "flags": 48,
+                    "obfuscated_id": "9061285431627333809",
+                    "online": false,
+                    "stall_public": false,
+                    "statistics": {
+                        "median_trade_time": 232,
+                        "total_avoided_trades": 0,
+                        "total_failed_trades": 0,
+                        "total_trades": 7,
+                        "total_verified_trades": 7
+                    }
+                },
+                "reference": {
+                    "base_price": 76423,
+                    "float_factor": 0.968921,
+                    "predicted_price": 74048,
+                    "quantity": 78,
+                    "last_updated": "2024-02-22T00:32:17.614884Z"
+                },
+                "item": {
+                    "asset_id": "38222265539",
+                    "def_index": 507,
+                    "paint_index": 42,
+                    "paint_seed": 775,
+                    "float_value": 0.2509937882423401,
+                    "icon_url": "s8G_ZgYwd4vrCWNrcI52qKaj__xeeLh9JWXR9yTF9FU1FwUjvzocZLOtEyA_CIMC_kVmn3JIGPGnfFOPa1tYMJ7AxwLXMRYK5saaZBRjGv4vaT21BYGvFlNfzMvBIEcf22AQp08yltjIkCcQTKLSFK8iO9jt2APl54uRx4kCyWWfpVi3v6Tl7OJEH37jUuoqWdjvDtib0w",
+                    "d_param": "50159763895186753262",
+                    "is_stattrak": false,
+                    "is_souvenir": false,
+                    "rarity": 6,
+                    "quality": 3,
+                    "market_hash_name": "★ Karambit | Blue Steel (Field-Tested)",
+                    "tradable": 0,
+                    "inspect_link": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%207A57635496294F2CF03A335EAF764106EFF18DFC713011",
+                    "cs2_screenshot_id": "5972566498369481161",
+                    "cs2_screenshot_at": "2025-10-13T07:15:15.979318Z",
+                    "is_commodity": false,
+                    "type": "skin",
+                    "rarity_name": "Covert",
+                    "type_name": "Skin",
+                    "item_name": "★ Karambit | Blue Steel",
+                    "wear_name": "Field-Tested",
+                    "description": "It has been cold blued.\\n\\n<i>This is the malbec of weapon design - Booth, Arms Dealer</i>",
+                    "serialized_inspect": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%207A57635496294F2CF03A335EAF764106EFF18DFC713011",
+                    "gs_sig": "716fff25a1edc6d1b6ad"
+                },
+                "is_seller": false,
+                "is_watchlisted": false,
+                "watchers": 0,
+                "sold_at": "2024-03-08T07:12:34.781773Z"
+            },
+            "trade_url": "https://steamcommunity.com/tradeoffer/new/?partner=00000000&token=XXXXXXXX",
+            "trade_token": "XXXXXXXX",
+            "wait_for_cancel_ping": false,
+            "is_settlement_period": true
+        },
+        {
+            "id": "499682499943172157",
+            "created_at": "2024-02-25T15:51:26.271992Z",
+            "buyer_id": "76561190000000001",
+            "buyer": {
+                "avatar": "https://avatars.steamstatic.com/dummy_avatar_000_full.jpg",
+                "away": false,
+                "flags": 48,
+                "online": false,
+                "stall_public": false,
+                "statistics": {
+                    "median_trade_time": 0,
+                    "total_avoided_trades": 0,
+                    "total_failed_trades": 0,
+                    "total_trades": 0,
+                    "total_verified_trades": 0
+                },
+                "steam_id": "76561190000000001",
+                "username": "buyer_user"
+            },
+            "seller_id": "76561198000000004",
+            "seller": {
+                "avatar": "https://avatars.steamstatic.com/dummy_avatar_004_full.jpg",
+                "away": false,
+                "flags": 48,
+                "online": false,
+                "stall_public": true,
+                "statistics": {
+                    "median_trade_time": 172,
+                    "total_avoided_trades": 0,
+                    "total_failed_trades": 0,
+                    "total_trades": 20,
+                    "total_verified_trades": 20
+                },
+                "steam_id": "76561198000000004",
+                "username": "seller_004"
+            },
+            "contract_id": "839965111004001914",
+            "accepted_at": "2024-07-06T04:12:00.352145Z",
+            "state": "verified",
+            "verification_mode": "escrow",
+            "steam_offer": {
+                "id": "3062201652",
+                "state": 3,
+                "is_from_seller": false,
+                "can_cancel_at": "2025-06-24T17:09:02.827812Z",
+                "sent_at": "2025-01-06T01:46:01.423921Z",
+                "deadline_at": "2024-05-20T07:25:15.055867Z",
+                "updated_at": "2024-01-23T22:00:00Z"
+            },
+            "verify_sale_at": "2024-04-16T11:03:35Z",
+            "verified_at": "2024-04-24T10:01:38.318931Z",
+            "inventory_check_status": 1,
+            "trade_protection_ends_at": "2024-10-28T15:10:13Z",
+            "contract": {
+                "id": "839965111004001914",
+                "created_at": "2025-12-22T04:15:07.234223Z",
+                "type": "buy_now",
+                "price": 56352,
+                "state": "sold",
+                "seller": {
+                    "avatar": "https://avatars.steamstatic.com/a3d8bfc1b402759c1542bd10f3f99d92368f2ed6_full.jpg",
+                    "away": false,
+                    "flags": 48,
+                    "online": false,
+                    "stall_public": true,
+                    "statistics": {
+                        "median_trade_time": 172,
+                        "total_avoided_trades": 0,
+                        "total_failed_trades": 0,
+                        "total_trades": 20,
+                        "total_verified_trades": 20
+                    },
+                    "steam_id": "76561198000000004",
+                    "username": "Polar_06"
+                },
+                "reference": {
+                    "base_price": 52522,
+                    "float_factor": 0.9706358,
+                    "predicted_price": 50980,
+                    "quantity": 69,
+                    "last_updated": "2025-01-17T00:12:21.983632Z"
+                },
+                "item": {
+                    "asset_id": "33614674462",
+                    "def_index": 508,
+                    "paint_index": 42,
+                    "paint_seed": 826,
+                    "float_value": 0.3081933557987213,
+                    "icon_url": "vzbnEpHerHWkziQLE5QecH7uj8p5xytdU-kZ1qp63y8BgfgpAMFcH0JLPmwV0ziUaln6A3-Jvo_mYwk8X0CANiwjrUgUQPE79JQrvmpajwnAJGeDEdatcve4XkcYoqO8-KYAybYfkbqV8YV55Jr6GtKXpB7ZEtP2kfa1IwPbwEojLTFUETy9nKE6wxDHs0xjgmMhFcVmbHhP",
+                    "d_param": "44181514505349500965",
+                    "is_stattrak": false,
+                    "is_souvenir": false,
+                    "rarity": 6,
+                    "quality": 3,
+                    "market_hash_name": "★ M9 Bayonet | Blue Steel (Field-Tested)",
+                    "tradable": 0,
+                    "inspect_link": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20S76561198000000004A33614674462D44181514505349500965",
+                    "cs2_screenshot_id": "1918594147111916228",
+                    "cs2_screenshot_at": "2024-02-20T11:57:38.326057Z",
+                    "is_commodity": false,
+                    "type": "skin",
+                    "rarity_name": "Covert",
+                    "type_name": "Skin",
+                    "item_name": "★ M9 Bayonet | Blue Steel",
+                    "wear_name": "Field-Tested",
+                    "description": "It has been cold blued.\\n\\n<i>This is the malbec of weapon design - Booth, Arms Dealer</i>",
+                    "serialized_inspect": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20EA8E9DDB821E99168A2C0018071D7252FC5AF4099BA411",
+                    "gs_sig": "ed149118204db4836d47"
+                },
+                "is_seller": false,
+                "min_offer_price": 49990,
+                "max_offer_discount": 250,
+                "is_watchlisted": false,
+                "watchers": 1,
+                "sold_at": "2025-02-10T05:30:20.455929Z"
+            },
+            "trade_url": "https://steamcommunity.com/tradeoffer/new/?partner=00000000&token=XXXXXXXX",
+            "trade_token": "XXXXXXXX",
+            "wait_for_cancel_ping": false,
+            "is_settlement_period": true
+        },
+        {
+            "id": "692196100376167563",
+            "created_at": "2025-11-19T02:44:15.391334Z",
+            "buyer_id": "76561190000000001",
+            "buyer": {
+                "avatar": "https://avatars.steamstatic.com/dummy_avatar_000_full.jpg",
+                "away": false,
+                "flags": 48,
+                "online": false,
+                "stall_public": false,
+                "statistics": {
+                    "median_trade_time": 0,
+                    "total_avoided_trades": 0,
+                    "total_failed_trades": 0,
+                    "total_trades": 0,
+                    "total_verified_trades": 0
+                },
+                "steam_id": "76561190000000001",
+                "username": "buyer_user"
+            },
+            "seller_id": "76561198000000005",
+            "seller": {
+                "avatar": "https://avatars.steamstatic.com/dummy_avatar_005_full.jpg",
+                "away": false,
+                "flags": 48,
+                "online": false,
+                "stall_public": false,
+                "statistics": {
+                    "median_trade_time": 154,
+                    "total_avoided_trades": 0,
+                    "total_failed_trades": 0,
+                    "total_trades": 12,
+                    "total_verified_trades": 12
+                },
+                "steam_id": "76561198000000005",
+                "username": "seller_005"
+            },
+            "contract_id": "198848183813500771",
+            "accepted_at": "2025-03-08T03:29:01.619451Z",
+            "state": "verified",
+            "verification_mode": "escrow",
+            "steam_offer": {
+                "id": "9735221561",
+                "state": 3,
+                "is_from_seller": false,
+                "can_cancel_at": "2024-11-16T17:12:57.014896Z",
+                "sent_at": "2024-11-29T06:33:01.781754Z",
+                "deadline_at": "2025-01-05T10:57:15.270680Z",
+                "updated_at": "2025-02-28T19:19:18Z"
+            },
+            "verify_sale_at": "2024-04-16T11:03:35Z",
+            "verified_at": "2024-05-17T00:08:56.039416Z",
+            "inventory_check_status": 1,
+            "trade_protection_ends_at": "2024-10-28T15:10:13Z",
+            "contract": {
+                "id": "198848183813500771",
+                "created_at": "2025-04-24T12:54:07.423045Z",
+                "type": "buy_now",
+                "price": 65652,
+                "state": "sold",
+                "seller": {
+                    "away": false,
+                    "flags": 48,
+                    "obfuscated_id": "8615826260627808387",
+                    "online": false,
+                    "stall_public": false,
+                    "statistics": {
+                        "median_trade_time": 154,
+                        "total_avoided_trades": 0,
+                        "total_failed_trades": 0,
+                        "total_trades": 12,
+                        "total_verified_trades": 12
+                    }
+                },
+                "reference": {
+                    "base_price": 84961,
+                    "float_factor": 0.9697085,
+                    "predicted_price": 82387,
+                    "quantity": 157,
+                    "last_updated": "2025-01-12T01:35:18.194031Z"
+                },
+                "item": {
+                    "asset_id": "53464535376",
+                    "def_index": 515,
+                    "paint_index": 42,
+                    "paint_seed": 716,
+                    "float_value": 0.264741986989975,
+                    "icon_url": "GfA0EEr3URcRLZjgyb0XfVof--i5KsHwteWPH3d47YlS0Qq08b99dbhqunKpQrd_p4luifaC0NmBYYrrWVrd49AVgebJMo_2rPxx8fqGQ9wX_RLFyKqavWqiVknDkqFWkTArbT45HkPEMDVdM_t4JpX2UG4rXHdZOmrN4jnz3inopSzR1p1muGL2mJsfaJF2GtnTWfLpyAg",
+                    "d_param": "32410148090992449121",
+                    "is_stattrak": false,
+                    "is_souvenir": false,
+                    "rarity": 6,
+                    "quality": 3,
+                    "market_hash_name": "★ Butterfly Knife | Blue Steel (Field-Tested)",
+                    "tradable": 0,
+                    "inspect_link": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2007C19145BE26034BB2803294C6322853FCD587A8FB6BF3",
+                    "cs2_screenshot_id": "3865373479363521512",
+                    "cs2_screenshot_at": "2025-12-30T21:19:42.809669Z",
+                    "is_commodity": false,
+                    "type": "skin",
+                    "rarity_name": "Covert",
+                    "type_name": "Skin",
+                    "item_name": "★ Butterfly Knife | Blue Steel",
+                    "wear_name": "Field-Tested",
+                    "description": "It has been cold blued.\\n\\n<i>This is the malbec of weapon design - Booth, Arms Dealer</i>",
+                    "collection": "The Breakout Collection",
+                    "serialized_inspect": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2007C19145BE26034BB2803294C6322853FCD587A8FB6BF3",
+                    "gs_sig": "0e20dcc2e48bdd23ef93"
+                },
+                "is_seller": false,
+                "min_offer_price": 77561,
+                "max_offer_discount": 658,
+                "is_watchlisted": false,
+                "watchers": 0,
+                "sold_at": "2024-04-06T02:34:14.445098Z"
+            },
+            "trade_url": "https://steamcommunity.com/tradeoffer/new/?partner=00000000&token=XXXXXXXX",
+            "trade_token": "XXXXXXXX",
+            "wait_for_cancel_ping": false,
+            "is_settlement_period": true
+        },
+        {
+            "id": "888578326595649935",
+            "created_at": "2025-10-22T04:37:33.342436Z",
+            "buyer_id": "76561190000000001",
+            "buyer": {
+                "avatar": "https://avatars.steamstatic.com/dummy_avatar_000_full.jpg",
+                "away": false,
+                "flags": 48,
+                "online": false,
+                "stall_public": false,
+                "statistics": {
+                    "median_trade_time": 0,
+                    "total_avoided_trades": 0,
+                    "total_failed_trades": 0,
+                    "total_trades": 0,
+                    "total_verified_trades": 0
+                },
+                "steam_id": "76561190000000001",
+                "username": "buyer_user"
+            },
+            "seller_id": "76561198000000006",
+            "seller": {
+                "avatar": "https://avatars.steamstatic.com/dummy_avatar_006_full.jpg",
+                "away": false,
+                "flags": 48,
+                "online": false,
+                "stall_public": true,
+                "statistics": {
+                    "median_trade_time": 67,
+                    "total_avoided_trades": 0,
+                    "total_failed_trades": 0,
+                    "total_trades": 9038,
+                    "total_verified_trades": 9038
+                },
+                "steam_id": "76561198000000006",
+                "username": "seller_006"
+            },
+            "contract_id": "267389425746724696",
+            "accepted_at": "2025-03-15T09:30:12.123456Z",
+            "state": "verified",
+            "verification_mode": "escrow",
+            "steam_offer": {
+                "id": "9751726179",
+                "state": 3,
+                "is_from_seller": false,
+                "can_cancel_at": "2025-05-21T05:16:57.449678Z",
+                "sent_at": "2025-10-09T02:19:55.443103Z",
+                "deadline_at": "2025-08-24T13:27:48.404239Z",
+                "updated_at": "2025-12-04T05:57:10Z"
+            },
+            "verify_sale_at": "2024-11-02T20:11:30Z",
+            "verified_at": "2024-06-08T09:39:25.664001Z",
+            "inventory_check_status": 2,
+            "trade_protection_ends_at": "2024-01-28T06:09:07Z",
+            "contract": {
+                "id": "267389425746724696",
+                "created_at": "2025-04-22T20:52:41.998381Z",
+                "type": "buy_now",
+                "price": 23,
+                "state": "sold",
+                "seller": {
+                    "avatar": "https://avatars.steamstatic.com/b23f4317c3ea72200f28d4ecf996021b76e3f5b2_full.jpg",
+                    "away": false,
+                    "flags": 48,
+                    "online": false,
+                    "stall_public": true,
+                    "statistics": {
+                        "median_trade_time": 67,
+                        "total_avoided_trades": 0,
+                        "total_failed_trades": 0,
+                        "total_trades": 9038,
+                        "total_verified_trades": 9038
+                    },
+                    "steam_id": "76561198000000006",
+                    "username": "Krawenzik 2"
+                },
+                "reference": {
+                    "base_price": 24,
+                    "predicted_price": 24,
+                    "quantity": 55443,
+                    "last_updated": "2024-05-02T03:58:11.074571Z"
+                },
+                "item": {
+                    "asset_id": "30438135299",
+                    "def_index": 4846,
+                    "icon_url": "Gc0MEm9SOcLi9MdRxCHAycmyo54ji1ucY01kficFW1G9zRDjB8QwXtH7XaEVXJYEaLCo-Mw_4TjIl-tvOUv6OuGCa_mD81vXZ18bUK-Zu-bDICzWJGZ2oFBAtyhxHO50JcrsQjS9Muztw6eS7qBrZaLEh2I_zCdRY9FQq8xHY9",
+                    "rarity": 1,
+                    "market_hash_name": "Recoil Case",
+                    "tradable": 0,
+                    "is_commodity": true,
+                    "type": "container",
+                    "rarity_name": "Base Grade",
+                    "type_name": "Container",
+                    "item_name": "Recoil Case"
+                },
+                "is_seller": false,
+                "is_watchlisted": false,
+                "watchers": 0,
+                "sold_at": "2024-03-23T10:57:05.823532Z"
+            },
+            "trade_url": "https://steamcommunity.com/tradeoffer/new/?partner=00000000&token=XXXXXXXX",
+            "trade_token": "XXXXXXXX",
+            "wait_for_cancel_ping": false,
+            "is_settlement_period": true
+        },
+        {
+            "id": "956642019780431626",
+            "created_at": "2025-07-07T09:40:31.924884Z",
+            "buyer_id": "76561190000000001",
+            "buyer": {
+                "avatar": "https://avatars.steamstatic.com/dummy_avatar_000_full.jpg",
+                "away": false,
+                "flags": 48,
+                "online": false,
+                "stall_public": false,
+                "statistics": {
+                    "median_trade_time": 0,
+                    "total_avoided_trades": 0,
+                    "total_failed_trades": 0,
+                    "total_trades": 0,
+                    "total_verified_trades": 0
+                },
+                "steam_id": "76561190000000001",
+                "username": "buyer_user"
+            },
+            "seller_id": "76561198000000006",
+            "seller": {
+                "avatar": "https://avatars.steamstatic.com/dummy_avatar_006_full.jpg",
+                "away": false,
+                "flags": 48,
+                "online": false,
+                "stall_public": true,
+                "statistics": {
+                    "median_trade_time": 67,
+                    "total_avoided_trades": 0,
+                    "total_failed_trades": 0,
+                    "total_trades": 9038,
+                    "total_verified_trades": 9038
+                },
+                "steam_id": "76561198000000006",
+                "username": "seller_006"
+            },
+            "contract_id": "820033414650607822",
+            "accepted_at": "2025-03-15T17:15:44.234567Z",
+            "state": "verified",
+            "verification_mode": "escrow",
+            "steam_offer": {
+                "id": "9751726179",
+                "state": 3,
+                "is_from_seller": false,
+                "can_cancel_at": "2025-12-29T05:01:21.862958Z",
+                "sent_at": "2025-10-09T02:19:55.443103Z",
+                "deadline_at": "2025-08-25T02:21:59.731293Z",
+                "updated_at": "2025-12-04T05:57:10Z"
+            },
+            "verify_sale_at": "2024-11-02T20:11:30Z",
+            "verified_at": "2024-09-03T05:57:29.740911Z",
+            "inventory_check_status": 2,
+            "trade_protection_ends_at": "2024-01-28T06:09:07Z",
+            "contract": {
+                "id": "820033414650607822",
+                "created_at": "2025-02-21T00:47:21.349132Z",
+                "type": "buy_now",
+                "price": 34,
+                "state": "sold",
+                "seller": {
+                    "avatar": "https://avatars.steamstatic.com/b23f4317c3ea72200f28d4ecf996021b76e3f5b2_full.jpg",
+                    "away": false,
+                    "flags": 48,
+                    "online": false,
+                    "stall_public": true,
+                    "statistics": {
+                        "median_trade_time": 67,
+                        "total_avoided_trades": 0,
+                        "total_failed_trades": 0,
+                        "total_trades": 9038,
+                        "total_verified_trades": 9038
+                    },
+                    "steam_id": "76561198000000006",
+                    "username": "Krawenzik 2"
+                },
+                "reference": {
+                    "base_price": 24,
+                    "predicted_price": 24,
+                    "quantity": 55443,
+                    "last_updated": "2025-03-07T05:44:10.183856Z"
+                },
+                "item": {
+                    "asset_id": "11780027694",
+                    "def_index": 4846,
+                    "icon_url": "Gc0MEm9SOcLi9MdRxCHAycmyo54ji1ucY01kficFW1G9zRDjB8QwXtH7XaEVXJYEaLCo-Mw_4TjIl-tvOUv6OuGCa_mD81vXZ18bUK-Zu-bDICzWJGZ2oFBAtyhxHO50JcrsQjS9Muztw6eS7qBrZaLEh2I_zCdRY9FQq8xHY9",
+                    "rarity": 1,
+                    "market_hash_name": "Recoil Case",
+                    "tradable": 0,
+                    "is_commodity": true,
+                    "type": "container",
+                    "rarity_name": "Base Grade",
+                    "type_name": "Container",
+                    "item_name": "Recoil Case"
+                },
+                "is_seller": false,
+                "is_watchlisted": false,
+                "watchers": 0,
+                "sold_at": "2024-03-23T10:57:05.823532Z"
+            },
+            "trade_url": "https://steamcommunity.com/tradeoffer/new/?partner=00000000&token=XXXXXXXX",
+            "trade_token": "XXXXXXXX",
+            "wait_for_cancel_ping": false,
+            "is_settlement_period": true
+        },
+        {
+            "id": "818118177673839748",
+            "created_at": "2024-01-14T16:12:04.051140Z",
+            "buyer_id": "76561190000000001",
+            "buyer": {
+                "avatar": "https://avatars.steamstatic.com/dummy_avatar_000_full.jpg",
+                "away": false,
+                "flags": 48,
+                "online": false,
+                "stall_public": false,
+                "statistics": {
+                    "median_trade_time": 0,
+                    "total_avoided_trades": 0,
+                    "total_failed_trades": 0,
+                    "total_trades": 0,
+                    "total_verified_trades": 0
+                },
+                "steam_id": "76561190000000001",
+                "username": "buyer_user"
+            },
+            "seller_id": "76561198000000006",
+            "seller": {
+                "avatar": "https://avatars.steamstatic.com/dummy_avatar_006_full.jpg",
+                "away": false,
+                "flags": 48,
+                "online": false,
+                "stall_public": true,
+                "statistics": {
+                    "median_trade_time": 67,
+                    "total_avoided_trades": 0,
+                    "total_failed_trades": 0,
+                    "total_trades": 9038,
+                    "total_verified_trades": 9038
+                },
+                "steam_id": "76561198000000006",
+                "username": "seller_006"
+            },
+            "contract_id": "498061007572429719",
+            "accepted_at": "2025-03-15T21:00:05.345678Z",
+            "state": "verified",
+            "verification_mode": "escrow",
+            "steam_offer": {
+                "id": "9751726179",
+                "state": 3,
+                "is_from_seller": false,
+                "can_cancel_at": "2024-07-27T12:43:16.172500Z",
+                "sent_at": "2025-10-09T02:19:55.443103Z",
+                "deadline_at": "2024-11-17T19:46:43.127284Z",
+                "updated_at": "2025-12-04T05:57:10Z"
+            },
+            "verify_sale_at": "2024-11-02T20:11:30Z",
+            "verified_at": "2025-10-17T05:15:57.546045Z",
+            "inventory_check_status": 2,
+            "trade_protection_ends_at": "2024-01-28T06:09:07Z",
+            "contract": {
+                "id": "498061007572429719",
+                "created_at": "2024-08-08T06:51:50.398017Z",
+                "type": "buy_now",
+                "price": 34,
+                "state": "sold",
+                "seller": {
+                    "avatar": "https://avatars.steamstatic.com/b23f4317c3ea72200f28d4ecf996021b76e3f5b2_full.jpg",
+                    "away": false,
+                    "flags": 48,
+                    "online": false,
+                    "stall_public": true,
+                    "statistics": {
+                        "median_trade_time": 67,
+                        "total_avoided_trades": 0,
+                        "total_failed_trades": 0,
+                        "total_trades": 9038,
+                        "total_verified_trades": 9038
+                    },
+                    "steam_id": "76561198000000006",
+                    "username": "Krawenzik 2"
+                },
+                "reference": {
+                    "base_price": 24,
+                    "predicted_price": 24,
+                    "quantity": 55443,
+                    "last_updated": "2025-12-18T20:32:57.679300Z"
+                },
+                "item": {
+                    "asset_id": "55762379059",
+                    "def_index": 4846,
+                    "icon_url": "Gc0MEm9SOcLi9MdRxCHAycmyo54ji1ucY01kficFW1G9zRDjB8QwXtH7XaEVXJYEaLCo-Mw_4TjIl-tvOUv6OuGCa_mD81vXZ18bUK-Zu-bDICzWJGZ2oFBAtyhxHO50JcrsQjS9Muztw6eS7qBrZaLEh2I_zCdRY9FQq8xHY9",
+                    "rarity": 1,
+                    "market_hash_name": "Recoil Case",
+                    "tradable": 0,
+                    "is_commodity": true,
+                    "type": "container",
+                    "rarity_name": "Base Grade",
+                    "type_name": "Container",
+                    "item_name": "Recoil Case"
+                },
+                "is_seller": false,
+                "is_watchlisted": false,
+                "watchers": 0,
+                "sold_at": "2024-03-23T10:57:05.823532Z"
+            },
+            "trade_url": "https://steamcommunity.com/tradeoffer/new/?partner=00000000&token=XXXXXXXX",
+            "trade_token": "XXXXXXXX",
+            "wait_for_cancel_ping": false,
+            "is_settlement_period": true
+        },
+        {
+            "id": "129017363496146172",
+            "created_at": "2025-10-12T16:29:49.193215Z",
+            "buyer_id": "76561190000000001",
+            "buyer": {
+                "avatar": "https://avatars.steamstatic.com/dummy_avatar_000_full.jpg",
+                "away": false,
+                "flags": 48,
+                "online": false,
+                "stall_public": false,
+                "statistics": {
+                    "median_trade_time": 0,
+                    "total_avoided_trades": 0,
+                    "total_failed_trades": 0,
+                    "total_trades": 0,
+                    "total_verified_trades": 0
+                },
+                "steam_id": "76561190000000001",
+                "username": "buyer_user"
+            },
+            "seller_id": "76561198000000006",
+            "seller": {
+                "avatar": "https://avatars.steamstatic.com/dummy_avatar_006_full.jpg",
+                "away": false,
+                "flags": 48,
+                "online": false,
+                "stall_public": true,
+                "statistics": {
+                    "median_trade_time": 67,
+                    "total_avoided_trades": 0,
+                    "total_failed_trades": 0,
+                    "total_trades": 9038,
+                    "total_verified_trades": 9038
+                },
+                "steam_id": "76561198000000006",
+                "username": "seller_006"
+            },
+            "contract_id": "348148208283469067",
+            "accepted_at": "2025-03-16T02:45:30.456789Z",
+            "state": "verified",
+            "verification_mode": "escrow",
+            "steam_offer": {
+                "id": "9751726179",
+                "state": 3,
+                "is_from_seller": false,
+                "can_cancel_at": "2024-11-01T09:13:07.144826Z",
+                "sent_at": "2025-10-09T02:19:55.443103Z",
+                "deadline_at": "2024-05-08T23:13:37.767728Z",
+                "updated_at": "2025-12-04T05:57:10Z"
+            },
+            "verify_sale_at": "2024-11-02T20:11:30Z",
+            "verified_at": "2024-11-01T02:04:02.817043Z",
+            "inventory_check_status": 2,
+            "trade_protection_ends_at": "2024-01-28T06:09:07Z",
+            "contract": {
+                "id": "348148208283469067",
+                "created_at": "2024-05-16T16:32:14.032333Z",
+                "type": "buy_now",
+                "price": 18,
+                "state": "sold",
+                "seller": {
+                    "avatar": "https://avatars.steamstatic.com/b23f4317c3ea72200f28d4ecf996021b76e3f5b2_full.jpg",
+                    "away": false,
+                    "flags": 48,
+                    "online": false,
+                    "stall_public": true,
+                    "statistics": {
+                        "median_trade_time": 67,
+                        "total_avoided_trades": 0,
+                        "total_failed_trades": 0,
+                        "total_trades": 9038,
+                        "total_verified_trades": 9038
+                    },
+                    "steam_id": "76561198000000006",
+                    "username": "Krawenzik 2"
+                },
+                "reference": {
+                    "base_price": 24,
+                    "predicted_price": 24,
+                    "quantity": 55443,
+                    "last_updated": "2025-07-09T02:07:24.238526Z"
+                },
+                "item": {
+                    "asset_id": "67716734949",
+                    "def_index": 4846,
+                    "icon_url": "Gc0MEm9SOcLi9MdRxCHAycmyo54ji1ucY01kficFW1G9zRDjB8QwXtH7XaEVXJYEaLCo-Mw_4TjIl-tvOUv6OuGCa_mD81vXZ18bUK-Zu-bDICzWJGZ2oFBAtyhxHO50JcrsQjS9Muztw6eS7qBrZaLEh2I_zCdRY9FQq8xHY9",
+                    "rarity": 1,
+                    "market_hash_name": "Recoil Case",
+                    "tradable": 0,
+                    "is_commodity": true,
+                    "type": "container",
+                    "rarity_name": "Base Grade",
+                    "type_name": "Container",
+                    "item_name": "Recoil Case"
+                },
+                "is_seller": false,
+                "is_watchlisted": false,
+                "watchers": 0,
+                "sold_at": "2024-03-23T10:57:05.823532Z"
+            },
+            "trade_url": "https://steamcommunity.com/tradeoffer/new/?partner=00000000&token=XXXXXXXX",
+            "trade_token": "XXXXXXXX",
+            "wait_for_cancel_ping": false,
+            "is_settlement_period": true
+        },
+        {
+            "id": "237972396959755783",
+            "created_at": "2024-04-10T01:00:15.944558Z",
+            "buyer_id": "76561190000000001",
+            "buyer": {
+                "avatar": "https://avatars.steamstatic.com/dummy_avatar_000_full.jpg",
+                "away": false,
+                "flags": 48,
+                "online": false,
+                "stall_public": false,
+                "statistics": {
+                    "median_trade_time": 0,
+                    "total_avoided_trades": 0,
+                    "total_failed_trades": 0,
+                    "total_trades": 0,
+                    "total_verified_trades": 0
+                },
+                "steam_id": "76561190000000001",
+                "username": "buyer_user"
+            },
+            "seller_id": "76561198000000006",
+            "seller": {
+                "avatar": "https://avatars.steamstatic.com/dummy_avatar_006_full.jpg",
+                "away": false,
+                "flags": 48,
+                "online": false,
+                "stall_public": true,
+                "statistics": {
+                    "median_trade_time": 67,
+                    "total_avoided_trades": 0,
+                    "total_failed_trades": 0,
+                    "total_trades": 9038,
+                    "total_verified_trades": 9038
+                },
+                "steam_id": "76561198000000006",
+                "username": "seller_006"
+            },
+            "contract_id": "908436193094949825",
+            "accepted_at": "2025-03-16T06:30:55.567890Z",
+            "state": "verified",
+            "verification_mode": "escrow",
+            "steam_offer": {
+                "id": "9751726179",
+                "state": 3,
+                "is_from_seller": false,
+                "can_cancel_at": "2024-10-09T00:50:23.183237Z",
+                "sent_at": "2025-10-09T02:19:55.443103Z",
+                "deadline_at": "2025-12-22T15:52:12.232977Z",
+                "updated_at": "2025-12-04T05:57:10Z"
+            },
+            "verify_sale_at": "2024-11-02T20:11:30Z",
+            "verified_at": "2025-07-26T17:21:40.695021Z",
+            "inventory_check_status": 2,
+            "trade_protection_ends_at": "2024-01-28T06:09:07Z",
+            "contract": {
+                "id": "908436193094949825",
+                "created_at": "2024-07-02T01:35:52.899373Z",
+                "type": "buy_now",
+                "price": 31,
+                "state": "sold",
+                "seller": {
+                    "avatar": "https://avatars.steamstatic.com/b23f4317c3ea72200f28d4ecf996021b76e3f5b2_full.jpg",
+                    "away": false,
+                    "flags": 48,
+                    "online": false,
+                    "stall_public": true,
+                    "statistics": {
+                        "median_trade_time": 67,
+                        "total_avoided_trades": 0,
+                        "total_failed_trades": 0,
+                        "total_trades": 9038,
+                        "total_verified_trades": 9038
+                    },
+                    "steam_id": "76561198000000006",
+                    "username": "Krawenzik 2"
+                },
+                "reference": {
+                    "base_price": 24,
+                    "predicted_price": 24,
+                    "quantity": 55443,
+                    "last_updated": "2025-05-16T17:31:13.668163Z"
+                },
+                "item": {
+                    "asset_id": "62178534768",
+                    "def_index": 4846,
+                    "icon_url": "Gc0MEm9SOcLi9MdRxCHAycmyo54ji1ucY01kficFW1G9zRDjB8QwXtH7XaEVXJYEaLCo-Mw_4TjIl-tvOUv6OuGCa_mD81vXZ18bUK-Zu-bDICzWJGZ2oFBAtyhxHO50JcrsQjS9Muztw6eS7qBrZaLEh2I_zCdRY9FQq8xHY9",
+                    "rarity": 1,
+                    "market_hash_name": "Recoil Case",
+                    "tradable": 0,
+                    "is_commodity": true,
+                    "type": "container",
+                    "rarity_name": "Base Grade",
+                    "type_name": "Container",
+                    "item_name": "Recoil Case"
+                },
+                "is_seller": false,
+                "is_watchlisted": false,
+                "watchers": 0,
+                "sold_at": "2024-03-23T10:57:05.823532Z"
+            },
+            "trade_url": "https://steamcommunity.com/tradeoffer/new/?partner=00000000&token=XXXXXXXX",
+            "trade_token": "XXXXXXXX",
+            "wait_for_cancel_ping": false,
+            "is_settlement_period": true
+        },
+        {
+            "id": "245752167923319336",
+            "created_at": "2024-04-27T17:52:35.108820Z",
+            "buyer_id": "76561190000000001",
+            "buyer": {
+                "avatar": "https://avatars.steamstatic.com/dummy_avatar_000_full.jpg",
+                "away": false,
+                "flags": 48,
+                "online": false,
+                "stall_public": false,
+                "statistics": {
+                    "median_trade_time": 0,
+                    "total_avoided_trades": 0,
+                    "total_failed_trades": 0,
+                    "total_trades": 0,
+                    "total_verified_trades": 0
+                },
+                "steam_id": "76561190000000001",
+                "username": "buyer_user"
+            },
+            "seller_id": "76561198000000006",
+            "seller": {
+                "avatar": "https://avatars.steamstatic.com/dummy_avatar_006_full.jpg",
+                "away": false,
+                "flags": 48,
+                "online": false,
+                "stall_public": true,
+                "statistics": {
+                    "median_trade_time": 67,
+                    "total_avoided_trades": 0,
+                    "total_failed_trades": 0,
+                    "total_trades": 9038,
+                    "total_verified_trades": 9038
+                },
+                "steam_id": "76561198000000006",
+                "username": "seller_006"
+            },
+            "contract_id": "833665278828259815",
+            "accepted_at": "2025-08-22T08:00:10.111111Z",
+            "state": "verified",
+            "verification_mode": "escrow",
+            "steam_offer": {
+                "id": "9751726179",
+                "state": 3,
+                "is_from_seller": false,
+                "can_cancel_at": "2024-10-24T03:21:04.130846Z",
+                "sent_at": "2025-10-09T02:19:55.443103Z",
+                "deadline_at": "2024-09-17T09:40:19.545882Z",
+                "updated_at": "2025-12-04T05:57:10Z"
+            },
+            "verify_sale_at": "2024-11-02T20:11:30Z",
+            "verified_at": "2025-12-13T15:11:49.861208Z",
+            "inventory_check_status": 2,
+            "trade_protection_ends_at": "2024-01-28T06:09:07Z",
+            "contract": {
+                "id": "833665278828259815",
+                "created_at": "2024-02-07T07:32:30.409353Z",
+                "type": "buy_now",
+                "price": 29,
+                "state": "sold",
+                "seller": {
+                    "avatar": "https://avatars.steamstatic.com/b23f4317c3ea72200f28d4ecf996021b76e3f5b2_full.jpg",
+                    "away": false,
+                    "flags": 48,
+                    "online": false,
+                    "stall_public": true,
+                    "statistics": {
+                        "median_trade_time": 67,
+                        "total_avoided_trades": 0,
+                        "total_failed_trades": 0,
+                        "total_trades": 9038,
+                        "total_verified_trades": 9038
+                    },
+                    "steam_id": "76561198000000006",
+                    "username": "Krawenzik 2"
+                },
+                "reference": {
+                    "base_price": 24,
+                    "predicted_price": 24,
+                    "quantity": 55443,
+                    "last_updated": "2024-07-15T14:21:17.774538Z"
+                },
+                "item": {
+                    "asset_id": "87524195320",
+                    "def_index": 4846,
+                    "icon_url": "Gc0MEm9SOcLi9MdRxCHAycmyo54ji1ucY01kficFW1G9zRDjB8QwXtH7XaEVXJYEaLCo-Mw_4TjIl-tvOUv6OuGCa_mD81vXZ18bUK-Zu-bDICzWJGZ2oFBAtyhxHO50JcrsQjS9Muztw6eS7qBrZaLEh2I_zCdRY9FQq8xHY9",
+                    "rarity": 1,
+                    "market_hash_name": "Recoil Case",
+                    "tradable": 0,
+                    "is_commodity": true,
+                    "type": "container",
+                    "rarity_name": "Base Grade",
+                    "type_name": "Container",
+                    "item_name": "Recoil Case"
+                },
+                "is_seller": false,
+                "is_watchlisted": false,
+                "watchers": 0,
+                "sold_at": "2024-03-23T10:57:05.823532Z"
+            },
+            "trade_url": "https://steamcommunity.com/tradeoffer/new/?partner=00000000&token=XXXXXXXX",
+            "trade_token": "XXXXXXXX",
+            "wait_for_cancel_ping": false,
+            "is_settlement_period": true
+        },
+        {
+            "id": "216390223985769559",
+            "created_at": "2024-02-12T02:13:19.769075Z",
+            "buyer_id": "76561190000000001",
+            "buyer": {
+                "avatar": "https://avatars.steamstatic.com/dummy_avatar_000_full.jpg",
+                "away": false,
+                "flags": 48,
+                "online": false,
+                "stall_public": false,
+                "statistics": {
+                    "median_trade_time": 0,
+                    "total_avoided_trades": 0,
+                    "total_failed_trades": 0,
+                    "total_trades": 0,
+                    "total_verified_trades": 0
+                },
+                "steam_id": "76561190000000001",
+                "username": "buyer_user"
+            },
+            "seller_id": "76561198000000006",
+            "seller": {
+                "avatar": "https://avatars.steamstatic.com/dummy_avatar_006_full.jpg",
+                "away": false,
+                "flags": 48,
+                "online": false,
+                "stall_public": true,
+                "statistics": {
+                    "median_trade_time": 67,
+                    "total_avoided_trades": 0,
+                    "total_failed_trades": 0,
+                    "total_trades": 9038,
+                    "total_verified_trades": 9038
+                },
+                "steam_id": "76561198000000006",
+                "username": "seller_006"
+            },
+            "contract_id": "344142141003699277",
+            "accepted_at": "2025-08-22T15:00:22.222222Z",
+            "state": "verified",
+            "verification_mode": "escrow",
+            "steam_offer": {
+                "id": "9751726179",
+                "state": 3,
+                "is_from_seller": false,
+                "can_cancel_at": "2025-01-09T04:52:27.184383Z",
+                "sent_at": "2025-10-09T02:19:55.443103Z",
+                "deadline_at": "2024-07-15T13:43:27.593619Z",
+                "updated_at": "2025-12-04T05:57:10Z"
+            },
+            "verify_sale_at": "2024-11-02T20:11:30Z",
+            "verified_at": "2024-05-07T08:53:05.397379Z",
+            "inventory_check_status": 2,
+            "trade_protection_ends_at": "2024-01-28T06:09:07Z",
+            "contract": {
+                "id": "344142141003699277",
+                "created_at": "2025-10-29T09:21:17.553883Z",
+                "type": "buy_now",
+                "price": 33,
+                "state": "sold",
+                "seller": {
+                    "avatar": "https://avatars.steamstatic.com/b23f4317c3ea72200f28d4ecf996021b76e3f5b2_full.jpg",
+                    "away": false,
+                    "flags": 48,
+                    "online": false,
+                    "stall_public": true,
+                    "statistics": {
+                        "median_trade_time": 67,
+                        "total_avoided_trades": 0,
+                        "total_failed_trades": 0,
+                        "total_trades": 9038,
+                        "total_verified_trades": 9038
+                    },
+                    "steam_id": "76561198000000006",
+                    "username": "Krawenzik 2"
+                },
+                "reference": {
+                    "base_price": 24,
+                    "predicted_price": 24,
+                    "quantity": 55443,
+                    "last_updated": "2025-05-28T03:49:20.150502Z"
+                },
+                "item": {
+                    "asset_id": "18444615771",
+                    "def_index": 4846,
+                    "icon_url": "Gc0MEm9SOcLi9MdRxCHAycmyo54ji1ucY01kficFW1G9zRDjB8QwXtH7XaEVXJYEaLCo-Mw_4TjIl-tvOUv6OuGCa_mD81vXZ18bUK-Zu-bDICzWJGZ2oFBAtyhxHO50JcrsQjS9Muztw6eS7qBrZaLEh2I_zCdRY9FQq8xHY9",
+                    "rarity": 1,
+                    "market_hash_name": "Recoil Case",
+                    "tradable": 0,
+                    "is_commodity": true,
+                    "type": "container",
+                    "rarity_name": "Base Grade",
+                    "type_name": "Container",
+                    "item_name": "Recoil Case"
+                },
+                "is_seller": false,
+                "is_watchlisted": false,
+                "watchers": 0,
+                "sold_at": "2024-03-23T10:57:05.823532Z"
+            },
+            "trade_url": "https://steamcommunity.com/tradeoffer/new/?partner=00000000&token=XXXXXXXX",
+            "trade_token": "XXXXXXXX",
+            "wait_for_cancel_ping": false,
+            "is_settlement_period": true
+        },
+        {
+            "id": "854574141918440909",
+            "created_at": "2024-10-06T11:47:05.665280Z",
+            "buyer_id": "76561190000000001",
+            "buyer": {
+                "avatar": "https://avatars.steamstatic.com/dummy_avatar_000_full.jpg",
+                "away": false,
+                "flags": 48,
+                "online": false,
+                "stall_public": false,
+                "statistics": {
+                    "median_trade_time": 0,
+                    "total_avoided_trades": 0,
+                    "total_failed_trades": 0,
+                    "total_trades": 0,
+                    "total_verified_trades": 0
+                },
+                "steam_id": "76561190000000001",
+                "username": "buyer_user"
+            },
+            "seller_id": "76561198000000006",
+            "seller": {
+                "avatar": "https://avatars.steamstatic.com/dummy_avatar_006_full.jpg",
+                "away": false,
+                "flags": 48,
+                "online": false,
+                "stall_public": true,
+                "statistics": {
+                    "median_trade_time": 67,
+                    "total_avoided_trades": 0,
+                    "total_failed_trades": 0,
+                    "total_trades": 9038,
+                    "total_verified_trades": 9038
+                },
+                "steam_id": "76561198000000006",
+                "username": "seller_006"
+            },
+            "contract_id": "695097275491694469",
+            "accepted_at": "2025-08-22T19:00:33.333333Z",
+            "state": "verified",
+            "verification_mode": "escrow",
+            "steam_offer": {
+                "id": "9751726179",
+                "state": 3,
+                "is_from_seller": false,
+                "can_cancel_at": "2024-04-11T02:29:32.178111Z",
+                "sent_at": "2025-10-09T02:19:55.443103Z",
+                "deadline_at": "2024-05-12T12:24:38.313587Z",
+                "updated_at": "2025-12-04T05:57:10Z"
+            },
+            "verify_sale_at": "2024-11-02T20:11:30Z",
+            "verified_at": "2025-02-07T19:20:54.320630Z",
+            "inventory_check_status": 2,
+            "trade_protection_ends_at": "2024-01-28T06:09:07Z",
+            "contract": {
+                "id": "695097275491694469",
+                "created_at": "2025-12-24T09:55:16.760877Z",
+                "type": "buy_now",
+                "price": 26,
+                "state": "sold",
+                "seller": {
+                    "avatar": "https://avatars.steamstatic.com/b23f4317c3ea72200f28d4ecf996021b76e3f5b2_full.jpg",
+                    "away": false,
+                    "flags": 48,
+                    "online": false,
+                    "stall_public": true,
+                    "statistics": {
+                        "median_trade_time": 67,
+                        "total_avoided_trades": 0,
+                        "total_failed_trades": 0,
+                        "total_trades": 9038,
+                        "total_verified_trades": 9038
+                    },
+                    "steam_id": "76561198000000006",
+                    "username": "Krawenzik 2"
+                },
+                "reference": {
+                    "base_price": 24,
+                    "predicted_price": 24,
+                    "quantity": 55443,
+                    "last_updated": "2024-08-29T02:23:35.079809Z"
+                },
+                "item": {
+                    "asset_id": "48418440662",
+                    "def_index": 4846,
+                    "icon_url": "Gc0MEm9SOcLi9MdRxCHAycmyo54ji1ucY01kficFW1G9zRDjB8QwXtH7XaEVXJYEaLCo-Mw_4TjIl-tvOUv6OuGCa_mD81vXZ18bUK-Zu-bDICzWJGZ2oFBAtyhxHO50JcrsQjS9Muztw6eS7qBrZaLEh2I_zCdRY9FQq8xHY9",
+                    "rarity": 1,
+                    "market_hash_name": "Recoil Case",
+                    "tradable": 0,
+                    "is_commodity": true,
+                    "type": "container",
+                    "rarity_name": "Base Grade",
+                    "type_name": "Container",
+                    "item_name": "Recoil Case"
+                },
+                "is_seller": false,
+                "is_watchlisted": false,
+                "watchers": 0,
+                "sold_at": "2024-03-23T10:57:05.823532Z"
+            },
+            "trade_url": "https://steamcommunity.com/tradeoffer/new/?partner=00000000&token=XXXXXXXX",
+            "trade_token": "XXXXXXXX",
+            "wait_for_cancel_ping": false,
+            "is_settlement_period": true
+        },
+        {
+            "id": "374487103889118807",
+            "created_at": "2024-05-18T00:01:39.394815Z",
+            "buyer_id": "76561190000000001",
+            "buyer": {
+                "avatar": "https://avatars.steamstatic.com/dummy_avatar_000_full.jpg",
+                "away": false,
+                "flags": 48,
+                "online": false,
+                "stall_public": false,
+                "statistics": {
+                    "median_trade_time": 0,
+                    "total_avoided_trades": 0,
+                    "total_failed_trades": 0,
+                    "total_trades": 0,
+                    "total_verified_trades": 0
+                },
+                "steam_id": "76561190000000001",
+                "username": "buyer_user"
+            },
+            "seller_id": "76561198000000006",
+            "seller": {
+                "avatar": "https://avatars.steamstatic.com/dummy_avatar_006_full.jpg",
+                "away": false,
+                "flags": 48,
+                "online": false,
+                "stall_public": true,
+                "statistics": {
+                    "median_trade_time": 67,
+                    "total_avoided_trades": 0,
+                    "total_failed_trades": 0,
+                    "total_trades": 9038,
+                    "total_verified_trades": 9038
+                },
+                "steam_id": "76561198000000006",
+                "username": "seller_006"
+            },
+            "contract_id": "705436603114720455",
+            "accepted_at": "2025-08-23T03:30:44.444444Z",
+            "state": "verified",
+            "verification_mode": "escrow",
+            "steam_offer": {
+                "id": "9751726179",
+                "state": 3,
+                "is_from_seller": false,
+                "can_cancel_at": "2024-12-28T21:46:06.497949Z",
+                "sent_at": "2025-10-09T02:19:55.443103Z",
+                "deadline_at": "2025-08-03T07:21:08.008524Z",
+                "updated_at": "2025-12-04T05:57:10Z"
+            },
+            "verify_sale_at": "2024-11-02T20:11:30Z",
+            "verified_at": "2025-06-08T19:54:16.523853Z",
+            "inventory_check_status": 2,
+            "trade_protection_ends_at": "2024-01-28T06:09:07Z",
+            "contract": {
+                "id": "705436603114720455",
+                "created_at": "2025-10-02T13:28:45.966897Z",
+                "type": "buy_now",
+                "price": 26,
+                "state": "sold",
+                "seller": {
+                    "avatar": "https://avatars.steamstatic.com/b23f4317c3ea72200f28d4ecf996021b76e3f5b2_full.jpg",
+                    "away": false,
+                    "flags": 48,
+                    "online": false,
+                    "stall_public": true,
+                    "statistics": {
+                        "median_trade_time": 67,
+                        "total_avoided_trades": 0,
+                        "total_failed_trades": 0,
+                        "total_trades": 9038,
+                        "total_verified_trades": 9038
+                    },
+                    "steam_id": "76561198000000006",
+                    "username": "Krawenzik 2"
+                },
+                "reference": {
+                    "base_price": 24,
+                    "predicted_price": 24,
+                    "quantity": 55443,
+                    "last_updated": "2025-10-01T18:37:54.182945Z"
+                },
+                "item": {
+                    "asset_id": "91329914897",
+                    "def_index": 4846,
+                    "icon_url": "Gc0MEm9SOcLi9MdRxCHAycmyo54ji1ucY01kficFW1G9zRDjB8QwXtH7XaEVXJYEaLCo-Mw_4TjIl-tvOUv6OuGCa_mD81vXZ18bUK-Zu-bDICzWJGZ2oFBAtyhxHO50JcrsQjS9Muztw6eS7qBrZaLEh2I_zCdRY9FQq8xHY9",
+                    "rarity": 1,
+                    "market_hash_name": "Recoil Case",
+                    "tradable": 0,
+                    "is_commodity": true,
+                    "type": "container",
+                    "rarity_name": "Base Grade",
+                    "type_name": "Container",
+                    "item_name": "Recoil Case"
+                },
+                "is_seller": false,
+                "is_watchlisted": false,
+                "watchers": 0,
+                "sold_at": "2024-03-23T10:57:05.823532Z"
+            },
+            "trade_url": "https://steamcommunity.com/tradeoffer/new/?partner=00000000&token=XXXXXXXX",
+            "trade_token": "XXXXXXXX",
+            "wait_for_cancel_ping": false,
+            "is_settlement_period": true
+        },
+        {
+            "id": "674249993787638143",
+            "created_at": "2024-05-14T14:56:49.451806Z",
+            "buyer_id": "76561190000000001",
+            "buyer": {
+                "avatar": "https://avatars.steamstatic.com/dummy_avatar_000_full.jpg",
+                "away": false,
+                "flags": 48,
+                "online": false,
+                "stall_public": false,
+                "statistics": {
+                    "median_trade_time": 0,
+                    "total_avoided_trades": 0,
+                    "total_failed_trades": 0,
+                    "total_trades": 0,
+                    "total_verified_trades": 0
+                },
+                "steam_id": "76561190000000001",
+                "username": "buyer_user"
+            },
+            "seller_id": "76561198000000006",
+            "seller": {
+                "avatar": "https://avatars.steamstatic.com/dummy_avatar_006_full.jpg",
+                "away": false,
+                "flags": 48,
+                "online": false,
+                "stall_public": true,
+                "statistics": {
+                    "median_trade_time": 67,
+                    "total_avoided_trades": 0,
+                    "total_failed_trades": 0,
+                    "total_trades": 9038,
+                    "total_verified_trades": 9038
+                },
+                "steam_id": "76561198000000006",
+                "username": "seller_006"
+            },
+            "contract_id": "278496873879758914",
+            "accepted_at": "2025-08-23T05:45:55.555555Z",
+            "state": "verified",
+            "verification_mode": "escrow",
+            "steam_offer": {
+                "id": "9751726179",
+                "state": 3,
+                "is_from_seller": false,
+                "can_cancel_at": "2024-01-05T20:07:04.637698Z",
+                "sent_at": "2025-10-09T02:19:55.443103Z",
+                "deadline_at": "2025-11-15T00:44:47.125799Z",
+                "updated_at": "2025-12-04T05:57:10Z"
+            },
+            "verify_sale_at": "2024-11-02T20:11:30Z",
+            "verified_at": "2024-01-26T23:09:36.035462Z",
+            "inventory_check_status": 2,
+            "trade_protection_ends_at": "2024-01-28T06:09:07Z",
+            "contract": {
+                "id": "278496873879758914",
+                "created_at": "2025-05-26T16:35:32.676751Z",
+                "type": "buy_now",
+                "price": 36,
+                "state": "sold",
+                "seller": {
+                    "avatar": "https://avatars.steamstatic.com/b23f4317c3ea72200f28d4ecf996021b76e3f5b2_full.jpg",
+                    "away": false,
+                    "flags": 48,
+                    "online": false,
+                    "stall_public": true,
+                    "statistics": {
+                        "median_trade_time": 67,
+                        "total_avoided_trades": 0,
+                        "total_failed_trades": 0,
+                        "total_trades": 9038,
+                        "total_verified_trades": 9038
+                    },
+                    "steam_id": "76561198000000006",
+                    "username": "Krawenzik 2"
+                },
+                "reference": {
+                    "base_price": 24,
+                    "predicted_price": 24,
+                    "quantity": 55443,
+                    "last_updated": "2024-02-28T03:47:31.696321Z"
+                },
+                "item": {
+                    "asset_id": "26594089802",
+                    "def_index": 4846,
+                    "icon_url": "Gc0MEm9SOcLi9MdRxCHAycmyo54ji1ucY01kficFW1G9zRDjB8QwXtH7XaEVXJYEaLCo-Mw_4TjIl-tvOUv6OuGCa_mD81vXZ18bUK-Zu-bDICzWJGZ2oFBAtyhxHO50JcrsQjS9Muztw6eS7qBrZaLEh2I_zCdRY9FQq8xHY9",
+                    "rarity": 1,
+                    "market_hash_name": "Recoil Case",
+                    "tradable": 0,
+                    "is_commodity": true,
+                    "type": "container",
+                    "rarity_name": "Base Grade",
+                    "type_name": "Container",
+                    "item_name": "Recoil Case"
+                },
+                "is_seller": false,
+                "is_watchlisted": false,
+                "watchers": 0,
+                "sold_at": "2024-03-23T10:57:05.823532Z"
+            },
+            "trade_url": "https://steamcommunity.com/tradeoffer/new/?partner=00000000&token=XXXXXXXX",
+            "trade_token": "XXXXXXXX",
+            "wait_for_cancel_ping": false,
+            "is_settlement_period": true
+        },
+        {
+            "id": "274685239332567845",
+            "created_at": "2024-08-25T07:15:54.776520Z",
+            "buyer_id": "76561190000000001",
+            "buyer": {
+                "avatar": "https://avatars.steamstatic.com/dummy_avatar_000_full.jpg",
+                "away": false,
+                "flags": 48,
+                "online": false,
+                "stall_public": false,
+                "statistics": {
+                    "median_trade_time": 0,
+                    "total_avoided_trades": 0,
+                    "total_failed_trades": 0,
+                    "total_trades": 0,
+                    "total_verified_trades": 0
+                },
+                "steam_id": "76561190000000001",
+                "username": "buyer_user"
+            },
+            "seller_id": "76561198000000007",
+            "seller": {
+                "avatar": "https://avatars.steamstatic.com/dummy_avatar_007_full.jpg",
+                "away": false,
+                "flags": 48,
+                "online": false,
+                "stall_public": true,
+                "statistics": {
+                    "median_trade_time": 70,
+                    "total_avoided_trades": 0,
+                    "total_failed_trades": 0,
+                    "total_trades": 50,
+                    "total_verified_trades": 50
+                },
+                "steam_id": "76561198000000007",
+                "username": "seller_007"
+            },
+            "contract_id": "450329569102833578",
+            "accepted_at": "2025-05-27T03:01:13.941568Z",
+            "state": "verified",
+            "verification_mode": "escrow",
+            "steam_offer": {
+                "id": "6622549141",
+                "state": 3,
+                "is_from_seller": false,
+                "can_cancel_at": "2024-04-22T12:13:00.731977Z",
+                "sent_at": "2024-04-10T17:29:13.819724Z",
+                "deadline_at": "2024-06-26T19:59:33.305027Z",
+                "updated_at": "2025-05-23T06:22:01Z"
+            },
+            "verify_sale_at": "2025-07-02T17:42:39Z",
+            "verified_at": "2025-06-19T09:47:24.342884Z",
+            "inventory_check_status": 1,
+            "trade_protection_ends_at": "2024-02-01T10:02:44Z",
+            "contract": {
+                "id": "450329569102833578",
+                "created_at": "2025-02-05T01:31:57.109616Z",
+                "type": "buy_now",
+                "price": 5483,
+                "state": "sold",
+                "seller": {
+                    "avatar": "https://avatars.steamstatic.com/586a71610cdc965519f74d872adba19bfb49f49e_full.jpg",
+                    "away": false,
+                    "flags": 48,
+                    "online": false,
+                    "stall_public": true,
+                    "statistics": {
+                        "median_trade_time": 70,
+                        "total_avoided_trades": 0,
+                        "total_failed_trades": 0,
+                        "total_trades": 50,
+                        "total_verified_trades": 50
+                    },
+                    "steam_id": "76561198000000007",
+                    "username": "Matt"
+                },
+                "reference": {
+                    "base_price": 9411,
+                    "float_factor": 0.98196524,
+                    "predicted_price": 9241,
+                    "quantity": 165,
+                    "last_updated": "2025-12-14T05:42:54.161605Z"
+                },
+                "item": {
+                    "asset_id": "48316997723",
+                    "def_index": 16,
+                    "paint_index": 632,
+                    "paint_seed": 569,
+                    "float_value": 0.35359832644462585,
+                    "icon_url": "sFmJTLBf0SNDLLPo9D3eH12EK26TJBLjFCEhejwMjaTGpGmsK0aKWJ9jfxl2iAZnMifAV8qcS6I9k1JrbtnKc_Fkcfo4SYrw2bSQTqnsABVxXf1cA7xHWbRYMYckcveeUXDTIhZu92ljxJkkV6--4rtzyExfuZXIxciyZ627eKF5qFfq8uZtWPJYObcI9u80MfGK",
+                    "d_param": "75788231278231357159",
+                    "is_stattrak": true,
+                    "is_souvenir": false,
+                    "rarity": 6,
+                    "quality": 9,
+                    "market_hash_name": "StatTrak™ M4A4 | Buzz Kill (Field-Tested)",
+                    "stickers": [
+                        {
+                            "stickerId": 3446,
+                            "slot": 0,
+                            "icon_url": "6tvGFBvcelMAF5xQnrwjp2dYFsVpUuphm6n3X-uaaVSRX9SO1mQU_QHRLLnw4x3o9uaILgkos1luVcfSORDOOW8CEBAjARG0yxqGBUzOiVs-w9Eeca4HH0-UMcemYba-k9MyOfEXcp5eLmsYip5jm6HPZl0oERndm__cUOleTfLqvulwocnn4etxVfe8cFUYqKQDFkxJ4E4IUni2rUzUR6eq43ZpvosVG",
+                            "name": "Sticker | Master Guardian Elite",
+                            "reference": {
+                                "price": 10,
+                                "quantity": 159,
+                                "updated_at": "2024-01-11T01:27:46.244036Z"
+                            }
+                        },
+                        {
+                            "stickerId": 3446,
+                            "slot": 2,
+                            "icon_url": "6tvGFBvcelMAF5xQnrwjp2dYFsVpUuphm6n3X-uaaVSRX9SO1mQU_QHRLLnw4x3o9uaILgkos1luVcfSORDOOW8CEBAjARG0yxqGBUzOiVs-w9Eeca4HH0-UMcemYba-k9MyOfEXcp5eLmsYip5jm6HPZl0oERndm__cUOleTfLqvulwocnn4etxVfe8cFUYqKQDFkxJ4E4IUni2rUzUR6eq43ZpvosVG",
+                            "name": "Sticker | Master Guardian Elite",
+                            "reference": {
+                                "price": 10,
+                                "quantity": 159,
+                                "updated_at": "2024-01-11T01:27:46.244036Z"
+                            }
+                        },
+                        {
+                            "stickerId": 5255,
+                            "slot": 3,
+                            "icon_url": "VPEFlCtHIiEixrY6X2bgzxwl1z4_-ZoZGAPYnSeorxaDWuE-EAIqWVgEKuW6Ds-w0NAuUFm4yfJT4R2RL40otbHxAGbPG2Xez-cJibYX-PGUCXff7BmV25VmHguYNLxpPMRA1tKvElQVANuebyvLN3o9LJgCUjN57QfPWT_MswJXl_eAInmKoB53HWATniZQcmig0CQz_bnwBCg71ok-ro_lB8P4Np2Tr0ef_aF",
+                            "name": "Sticker | Run CT, Run",
+                            "reference": {
+                                "price": 16,
+                                "quantity": 113,
+                                "updated_at": "2024-10-10T16:39:45.348212Z"
+                            }
+                        },
+                        {
+                            "stickerId": 7892,
+                            "slot": 5,
+                            "offset_x": -0.041596025,
+                            "offset_y": -0.006192565,
+                            "icon_url": "kyuP7Wp7SZ7n1mI_UM-zF5AlyE03oEkJSQBLSICRlLnIyUo_M4WrNp4NvH7_j9UqAMJw2o7I_gvw5Fp_NLwlTdr0wMx-oU3jAabXoUof4Bm8yFx1800IyZbOCgWaAzSbJf3GOgB5ZunmfOcwnvGxbtsOoUBdQP3PdwEp9-LbN8lqMfcrnhhWS3gK2_3XFXlC0kOp7lEbGTzeaFg1QyF7ft88XUDyw1lqwAmmOb5n1Ni8ZAGlTBNuBZfELWp3p0a",
+                            "name": "Sticker | Boom Detonation",
+                            "reference": {
+                                "price": 1,
+                                "quantity": 2155,
+                                "updated_at": "2024-03-26T02:52:00.698337Z"
+                            }
+                        },
+                        {
+                            "stickerId": 7884,
+                            "slot": 6,
+                            "offset_x": -0.24201453,
+                            "offset_y": -0.058103204,
+                            "icon_url": "1Mucj022izcot4f7CPZ0zQdnFtq4jZse1UgDSyEz-6dleXRGOX8Yt8f8lo6QuuEtuANpstGhWVw89kPEp9-6V4Yv3WEM-9p1GumsRHA0HSAWGDrnZEHC4eIlAXUUgbRxdwLxVLCtaW579kD3nVI5CDI8Gcg4S7eCOxr5LBliy8nUE9-65LE6iKfHZSCuvAUlnhS7xs_f9uHgQ4UI_2rZZIwNFcrllryMSGR4Ttf8A_8baMT1g_1rzOZW7xHy-jB",
+                            "name": "Sticker | Bolt Energy",
+                            "reference": {
+                                "price": 4,
+                                "quantity": 1403,
+                                "updated_at": "2024-03-26T02:52:00.698337Z"
+                            }
+                        }
+                    ],
+                    "tradable": 0,
+                    "inspect_link": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20S76561198000000007A48316997723D75788231278231357159",
+                    "cs2_screenshot_id": "5582915089887804383",
+                    "cs2_screenshot_at": "2024-03-31T18:27:14.770025Z",
+                    "is_commodity": false,
+                    "type": "skin",
+                    "rarity_name": "Covert",
+                    "type_name": "Skin",
+                    "item_name": "M4A4 | Buzz Kill",
+                    "wear_name": "Field-Tested",
+                    "description": "This Sektor Industry firearm has been sleekly painted in yellow and green.\\n\\n<i>There's one at every party</i>",
+                    "collection": "The Glove Collection",
+                    "serialized_inspect": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20BF5F3AFC23A35127894B8294739735F2C2DF06C5197CF988005B3F071283B660BAE835A3D4144D960A2F98D690820AF28113406A1FBF936AF33FDF16325A3DA185C042F8EFF0E8765703EDBBE2B42CBFFB2F5523BFE534BCAE42C151BFD787B611FCE9F4026B20A7C6893F32",
+                    "gs_sig": "e8c8a60c845a6ce7cc24"
+                },
+                "is_seller": false,
+                "is_watchlisted": false,
+                "watchers": 1,
+                "sold_at": "2025-09-15T15:55:03.698250Z"
+            },
+            "trade_url": "https://steamcommunity.com/tradeoffer/new/?partner=00000000&token=XXXXXXXX",
+            "trade_token": "XXXXXXXX",
+            "wait_for_cancel_ping": false,
+            "is_settlement_period": true
+        },
+        {
+            "id": "445540597555160961",
+            "created_at": "2024-10-03T07:20:10.218405Z",
+            "buyer_id": "76561190000000001",
+            "buyer": {
+                "avatar": "https://avatars.steamstatic.com/dummy_avatar_000_full.jpg",
+                "away": false,
+                "flags": 48,
+                "online": false,
+                "stall_public": false,
+                "statistics": {
+                    "median_trade_time": 0,
+                    "total_avoided_trades": 0,
+                    "total_failed_trades": 0,
+                    "total_trades": 0,
+                    "total_verified_trades": 0
+                },
+                "steam_id": "76561190000000001",
+                "username": "buyer_user"
+            },
+            "seller_id": "76561198000000008",
+            "seller": {
+                "avatar": "https://avatars.steamstatic.com/dummy_avatar_008_full.jpg",
+                "away": false,
+                "flags": 48,
+                "online": false,
+                "stall_public": false,
+                "statistics": {
+                    "median_trade_time": 84,
+                    "total_avoided_trades": 0,
+                    "total_failed_trades": 0,
+                    "total_trades": 35,
+                    "total_verified_trades": 35
+                },
+                "steam_id": "76561198000000008",
+                "username": "seller_008"
+            },
+            "contract_id": "334426905420438944",
+            "accepted_at": "2024-11-14T02:05:13.701870Z",
+            "state": "verified",
+            "verification_mode": "escrow",
+            "steam_offer": {
+                "id": "4496349102",
+                "state": 3,
+                "is_from_seller": false,
+                "can_cancel_at": "2024-10-30T00:31:27.389343Z",
+                "sent_at": "2024-04-18T01:42:42.828081Z",
+                "deadline_at": "2025-08-13T02:33:59.884049Z",
+                "updated_at": "2025-01-31T21:48:32Z"
+            },
+            "verify_sale_at": "2024-02-01T10:02:44Z",
+            "verified_at": "2025-09-17T20:41:55.970089Z",
+            "inventory_check_status": 1,
+            "trade_protection_ends_at": "2025-11-26T18:05:03Z",
+            "contract": {
+                "id": "334426905420438944",
+                "created_at": "2025-09-19T17:33:47.543780Z",
+                "type": "buy_now",
+                "price": 10340,
+                "state": "sold",
+                "seller": {
+                    "away": false,
+                    "flags": 48,
+                    "obfuscated_id": "38124792607448491725",
+                    "online": false,
+                    "stall_public": false,
+                    "statistics": {
+                        "median_trade_time": 84,
+                        "total_avoided_trades": 0,
+                        "total_failed_trades": 0,
+                        "total_trades": 35,
+                        "total_verified_trades": 35
+                    }
+                },
+                "reference": {
+                    "base_price": 9411,
+                    "float_factor": 0.9863478,
+                    "predicted_price": 9283,
+                    "quantity": 165,
+                    "last_updated": "2025-04-23T11:02:14.175690Z"
+                },
+                "item": {
+                    "asset_id": "39696953448",
+                    "def_index": 16,
+                    "paint_index": 632,
+                    "paint_seed": 222,
+                    "float_value": 0.3092200756072998,
+                    "icon_url": "sFmJTLBf0SNDLLPo9D3eH12EK26TJBLjFCEhejwMjaTGpGmsK0aKWJ9jfxl2iAZnMifAV8qcS6I9k1JrbtnKc_Fkcfo4SYrw2bSQTqnsABVxXf1cA7xHWbRYMYckcveeUXDTIhZu92ljxJkkV6--4rtzyExfuZXIxciyZ627eKF5qFfq8uZtWPJYObcI9u80MfGK",
+                    "d_param": "1532620480891444218",
+                    "is_stattrak": true,
+                    "is_souvenir": false,
+                    "rarity": 6,
+                    "quality": 9,
+                    "market_hash_name": "StatTrak™ M4A4 | Buzz Kill (Field-Tested)",
+                    "keychains": [
+                        {
+                            "stickerId": 47,
+                            "slot": 0,
+                            "offset_x": 18.554394,
+                            "offset_y": 0.883142,
+                            "offset_z": 12.485294,
+                            "pattern": 76224,
+                            "icon_url": "WYBwS4atHg4EMUF9HET8yPWo8rsqbTGo7UBX3RKQCXpKpjCvhJFahZtnCTmgQgPsi-tIJAyCDs5_LB8UkWyEmzvmjcnFstfbA-jnWjc0Gk-3ovJewvY1aBR-piO0BpsYGJ1Sf9iqVL5J7GSO7IjpdIhVmQ-G5WKkHLlrR9ND0S3Hdxo_BnZNCh0qeGLp7RevK2tS4XGgLuTNxibk5kFwDA_Yxk70wcO4dj_kTmXDw34fxunIlBZb6zpMQAsx5nVr5hAMuci",
+                            "name": "Charm | Magmatude",
+                            "reference": {
+                                "price": 191,
+                                "quantity": 772,
+                                "updated_at": "2024-03-02T20:34:21.384313Z"
+                            }
+                        }
+                    ],
+                    "tradable": 0,
+                    "inspect_link": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20C157537EACD3F6F0EF7500446569B098D6DC67A9C8078B808C0FDDA6FEA615AED87042271762C3177FDB5F86866A8CF3DAAD5D52A2E49273A3F49B",
+                    "cs2_screenshot_id": "7177051586778865604",
+                    "cs2_screenshot_at": "2025-03-28T11:20:15.413981Z",
+                    "is_commodity": false,
+                    "type": "skin",
+                    "rarity_name": "Covert",
+                    "type_name": "Skin",
+                    "item_name": "M4A4 | Buzz Kill",
+                    "wear_name": "Field-Tested",
+                    "description": "This Sektor Industry firearm has been sleekly painted in yellow and green.\\n\\n<i>There's one at every party</i>",
+                    "collection": "The Glove Collection",
+                    "serialized_inspect": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20C157537EACD3F6F0EF7500446569B098D6DC67A9C8078B808C0FDDA6FEA615AED87042271762C3177FDB5F86866A8CF3DAAD5D52A2E49273A3F49B",
+                    "gs_sig": "880f3874e8b12d27292f"
+                },
+                "is_seller": false,
+                "min_offer_price": 8530,
+                "max_offer_discount": 800,
+                "is_watchlisted": false,
+                "watchers": 0,
+                "sold_at": "2024-11-06T17:04:00.870728Z"
+            },
+            "trade_url": "https://steamcommunity.com/tradeoffer/new/?partner=00000000&token=XXXXXXXX",
+            "trade_token": "XXXXXXXX",
+            "wait_for_cancel_ping": false,
+            "is_settlement_period": true
+        },
+        {
+            "id": "623804167761997159",
+            "created_at": "2024-08-17T19:36:06.938928Z",
+            "buyer_id": "76561190000000001",
+            "buyer": {
+                "avatar": "https://avatars.steamstatic.com/dummy_avatar_000_full.jpg",
+                "away": false,
+                "flags": 48,
+                "online": false,
+                "stall_public": false,
+                "statistics": {
+                    "median_trade_time": 0,
+                    "total_avoided_trades": 0,
+                    "total_failed_trades": 0,
+                    "total_trades": 0,
+                    "total_verified_trades": 0
+                },
+                "steam_id": "76561190000000001",
+                "username": "buyer_user"
+            },
+            "seller_id": "76561198000000009",
+            "seller": {
+                "avatar": "https://avatars.steamstatic.com/dummy_avatar_009_full.jpg",
+                "away": false,
+                "flags": 48,
+                "online": false,
+                "stall_public": false,
+                "statistics": {
+                    "median_trade_time": 124,
+                    "total_avoided_trades": 0,
+                    "total_failed_trades": 0,
+                    "total_trades": 266,
+                    "total_verified_trades": 266
+                },
+                "steam_id": "76561198000000009",
+                "username": "seller_009"
+            },
+            "contract_id": "664478095525627331",
+            "accepted_at": "2025-03-22T20:35:14.016425Z",
+            "state": "verified",
+            "verification_mode": "escrow",
+            "steam_offer": {
+                "id": "3655829871",
+                "state": 3,
+                "is_from_seller": false,
+                "can_cancel_at": "2025-04-20T19:14:08.131908Z",
+                "sent_at": "2024-06-16T13:32:55.359054Z",
+                "deadline_at": "2025-06-07T08:29:24.516492Z",
+                "updated_at": "2024-05-10T10:55:24Z"
+            },
+            "verify_sale_at": "2024-02-01T10:02:44Z",
+            "verified_at": "2025-09-29T15:57:59.150959Z",
+            "inventory_check_status": 1,
+            "trade_protection_ends_at": "2025-11-26T18:05:03Z",
+            "contract": {
+                "id": "664478095525627331",
+                "created_at": "2025-03-27T06:51:19.095332Z",
+                "type": "buy_now",
+                "price": 6073,
+                "description": ".18 clean float, looks MW ✨",
+                "state": "sold",
+                "seller": {
+                    "away": false,
+                    "flags": 48,
+                    "obfuscated_id": "94194266599098013532",
+                    "online": false,
+                    "stall_public": false,
+                    "statistics": {
+                        "median_trade_time": 124,
+                        "total_avoided_trades": 0,
+                        "total_failed_trades": 0,
+                        "total_trades": 266,
+                        "total_verified_trades": 266
+                    }
+                },
+                "reference": {
+                    "base_price": 9312,
+                    "float_factor": 1.0530243,
+                    "predicted_price": 9806,
+                    "quantity": 175,
+                    "last_updated": "2024-04-25T22:22:58.661766Z"
+                },
+                "item": {
+                    "asset_id": "85792552882",
+                    "def_index": 16,
+                    "paint_index": 632,
+                    "paint_seed": 702,
+                    "float_value": 0.1815498024225235,
+                    "icon_url": "sFmJTLBf0SNDLLPo9D3eH12EK26TJBLjFCEhejwMjaTGpGmsK0aKWJ9jfxl2iAZnMifAV8qcS6I9k1JrbtnKc_Fkcfo4SYrw2bSQTqnsABVxXf1cA7xHWbRYMYckcveeUXDTIhZu92ljxJkkV6--4rtzyExfuZXIxciyZ627eKF5qFfq8uZtWPJYObcI9u80MfGK",
+                    "d_param": "3495424320182411653",
+                    "is_stattrak": true,
+                    "is_souvenir": false,
+                    "rarity": 6,
+                    "quality": 9,
+                    "market_hash_name": "StatTrak™ M4A4 | Buzz Kill (Field-Tested)",
+                    "tradable": 0,
+                    "inspect_link": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%200628B65E8C5CCFED3FED59706E1D1359C609438C1F45A9CF6681E70E",
+                    "cs2_screenshot_id": "7852058327358145026",
+                    "cs2_screenshot_at": "2024-10-27T21:58:22.594402Z",
+                    "is_commodity": false,
+                    "type": "skin",
+                    "rarity_name": "Covert",
+                    "type_name": "Skin",
+                    "item_name": "M4A4 | Buzz Kill",
+                    "wear_name": "Field-Tested",
+                    "description": "This Sektor Industry firearm has been sleekly painted in yellow and green.\\n\\n<i>There's one at every party</i>",
+                    "collection": "The Glove Collection",
+                    "serialized_inspect": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%200628B65E8C5CCFED3FED59706E1D1359C609438C1F45A9CF6681E70E",
+                    "gs_sig": "18a12020fa61a5e60bcc"
+                },
+                "is_seller": false,
+                "min_offer_price": 9861,
+                "max_offer_discount": 100,
+                "is_watchlisted": false,
+                "watchers": 2,
+                "sold_at": "2025-10-14T05:42:39.259595Z"
+            },
+            "trade_url": "https://steamcommunity.com/tradeoffer/new/?partner=00000000&token=XXXXXXXX",
+            "trade_token": "XXXXXXXX",
+            "wait_for_cancel_ping": false,
+            "is_settlement_period": true
+        },
+        {
+            "id": "178834007124017213",
+            "created_at": "2024-12-07T07:15:43.707028Z",
+            "buyer_id": "76561190000000001",
+            "buyer": {
+                "avatar": "https://avatars.steamstatic.com/dummy_avatar_000_full.jpg",
+                "away": false,
+                "flags": 48,
+                "online": false,
+                "stall_public": false,
+                "statistics": {
+                    "median_trade_time": 0,
+                    "total_avoided_trades": 0,
+                    "total_failed_trades": 0,
+                    "total_trades": 0,
+                    "total_verified_trades": 0
+                },
+                "steam_id": "76561190000000001",
+                "username": "buyer_user"
+            },
+            "seller_id": "76561198000000010",
+            "seller": {
+                "avatar": "https://avatars.steamstatic.com/dummy_avatar_010_full.jpg",
+                "away": false,
+                "flags": 48,
+                "online": false,
+                "stall_public": true,
+                "statistics": {
+                    "median_trade_time": 148,
+                    "total_avoided_trades": 2,
+                    "total_failed_trades": 42,
+                    "total_trades": 11007,
+                    "total_verified_trades": 10965
+                },
+                "steam_id": "76561198000000010",
+                "username": "seller_010"
+            },
+            "contract_id": "895046648537879425",
+            "accepted_at": "2025-05-06T05:51:18.204860Z",
+            "state": "verified",
+            "verification_mode": "escrow",
+            "steam_offer": {
+                "id": "4785384203",
+                "state": 3,
+                "is_from_seller": false,
+                "can_cancel_at": "2025-11-26T22:44:56.092265Z",
+                "sent_at": "2024-12-29T16:19:16.673612Z",
+                "deadline_at": "2024-01-07T22:00:47.645027Z",
+                "updated_at": "2025-04-10T03:47:23Z"
+            },
+            "verify_sale_at": "2024-01-28T06:09:07Z",
+            "verified_at": "2025-08-11T10:36:10.851710Z",
+            "inventory_check_status": 1,
+            "trade_protection_ends_at": "2024-06-20T16:07:29Z",
+            "contract": {
+                "id": "895046648537879425",
+                "created_at": "2024-10-08T17:29:04.134278Z",
+                "type": "buy_now",
+                "price": 23996,
+                "state": "sold",
+                "seller": {
+                    "avatar": "https://avatars.steamstatic.com/39148b81df3b6013cac3d09b303b6f2dcbc7c5d9_full.jpg",
+                    "away": false,
+                    "flags": 48,
+                    "online": true,
+                    "stall_public": true,
+                    "statistics": {
+                        "median_trade_time": 148,
+                        "total_avoided_trades": 2,
+                        "total_failed_trades": 42,
+                        "total_trades": 11007,
+                        "total_verified_trades": 10965
+                    },
+                    "steam_id": "76561198000000010",
+                    "username": "nolxve"
+                },
+                "reference": {
+                    "base_price": 26031,
+                    "float_factor": 0.9712405,
+                    "predicted_price": 25282,
+                    "quantity": 75,
+                    "last_updated": "2025-10-21T06:49:20.377118Z"
+                },
+                "item": {
+                    "asset_id": "41254269433",
+                    "def_index": 60,
+                    "paint_index": 587,
+                    "paint_seed": 638,
+                    "float_value": 0.0699143186211586,
+                    "icon_url": "c9RetMuoKdFtKeDohMqHjHV6UvvEmMl0h_u2VG6VNbKzd6mcPMSvfHkRFh5dGaHhIxcnBxYk8F64kFAQ4nvqe9Qr77G6FlznFqM4s3jdoTcnwkQVW2krcMGA3WG6o4rWdcj0jTnBnAkfBW_a3GOZ8NlmtNlDg7vxrjrm1rt0yr3Wk8R9glHsraMiaO17zvRm383amYoC8DDdnPOLyFdxhiL7zPf_",
+                    "d_param": "84833735730698117413",
+                    "is_stattrak": true,
+                    "is_souvenir": false,
+                    "rarity": 6,
+                    "quality": 9,
+                    "market_hash_name": "StatTrak™ M4A1-S | Mecha Industries (Factory New)",
+                    "stickers": [
+                        {
+                            "stickerId": 4546,
+                            "slot": 4,
+                            "wear": 0.74,
+                            "offset_x": 0.009978354,
+                            "offset_y": 0.0006764233,
+                            "icon_url": "R2KJyoyG9ivFnBgSZMxrC-be7FnOQAhgL5h4pB6GVDrm46B7mVdM2UV3Qup_Vz4WHXg1o6IHzoLRpmNbV7Fqhsp3Hv9Dn4PWbfaZgubJ2P5o46lcnq62PIKgwIhihRaaSXYuH_4kJtoXm1-4X-fKLdxAL_7oOoHvcnPtf4UYkqHfh0T0EWqj7ZYHjXOZa8MibvhYMfrqsqCHsOF0va7-bgIOOO",
+                            "name": "Sticker | Killjoy (Holo)",
+                            "reference": {
+                                "price": 268,
+                                "quantity": 88,
+                                "updated_at": "2025-05-25T11:48:07.648421Z"
+                            }
+                        },
+                        {
+                            "stickerId": 972,
+                            "slot": 0,
+                            "offset_x": -0.26862034,
+                            "offset_y": -0.012840629,
+                            "icon_url": "sanyYC-elNPRb5S2LkQMMv8ohcFL__IaVJmz0ZMKUe9AuNkB6E_xjVUvQeyILvJsVbzksFQaWoSXM2_lzdpqUd8Kmk_6P6utTqw0auBPBUc7ReRrJgjtUKHudmNYyqlxczy0Sg6BkIUT5ZnBZbDtFtzzMG284wVYQqeZPL_01Zksvqxshe3Bq3jjlxAojTf3wQAVqJrkdJ4aDkCACnkWB7JsQnTkHAZlq91x8sS",
+                            "name": "Sticker | Sherry (Holo)",
+                            "reference": {
+                                "price": 167,
+                                "quantity": 99,
+                                "updated_at": "2024-10-10T16:39:45.348212Z"
+                            }
+                        },
+                        {
+                            "stickerId": 5262,
+                            "slot": 0,
+                            "wear": 1,
+                            "offset_x": -0.14280629,
+                            "offset_y": -0.01235348,
+                            "rotation": -45,
+                            "icon_url": "uDcA_usEKhAjCUXl1XWXKCP5WbbkamKT2Y4gAGDa0fm7P0PGx806HILquDklV0vrUcf3nvYqKCfcdnvZBC4PeIxlOmY-RMDc-JtD5Z8JBN8e4T7P9lcICYtzKjdViPNAKnrgvdGJ9Z6PV5-c41JFqIc1qXT37IC5oPFe36S0r1wF_oydt7aZ8R0jzYHL-Yvy6pHFe5VbH2yq8JZ5uNOvUi3pR24p0HoleR98fbvN3dizyZ",
+                            "name": "Sticker | Infinite Diamond (Holo)",
+                            "reference": {
+                                "price": 424,
+                                "quantity": 450,
+                                "updated_at": "2024-02-12T03:50:00.079419Z"
+                            }
+                        },
+                        {
+                            "stickerId": 5262,
+                            "slot": 1,
+                            "wear": 1,
+                            "offset_x": 0.018093117,
+                            "offset_y": -0.04519242,
+                            "rotation": 45,
+                            "icon_url": "uDcA_usEKhAjCUXl1XWXKCP5WbbkamKT2Y4gAGDa0fm7P0PGx806HILquDklV0vrUcf3nvYqKCfcdnvZBC4PeIxlOmY-RMDc-JtD5Z8JBN8e4T7P9lcICYtzKjdViPNAKnrgvdGJ9Z6PV5-c41JFqIc1qXT37IC5oPFe36S0r1wF_oydt7aZ8R0jzYHL-Yvy6pHFe5VbH2yq8JZ5uNOvUi3pR24p0HoleR98fbvN3dizyZ",
+                            "name": "Sticker | Infinite Diamond (Holo)",
+                            "reference": {
+                                "price": 424,
+                                "quantity": 450,
+                                "updated_at": "2024-02-12T03:50:00.079419Z"
+                            }
+                        }
+                    ],
+                    "keychains": [
+                        {
+                            "stickerId": 23,
+                            "slot": 0,
+                            "offset_x": 32.421925,
+                            "offset_y": 1.061521,
+                            "offset_z": 4.8566155,
+                            "pattern": 37777,
+                            "icon_url": "3CQMzB8JptwRSOJjg0BHc8UBO5Xxi1me9MFOAnS6KTghID8WqzU0cxKx2OM6jx9XRLgDOAKfUTabRpr1QbOeAXKiN3do2UHf8-_k4bad9AyVLrET7pty5ID0fo7WUidN8Jich1zEReUq99ZHxdH9Y3vaU1QBy6FsItIpNp9DgBucl6cyenkUPJqlchrabyDVBdwWR_7G3g736Mu-XdgHe1RgeoSffpo_hb-HfDoQj",
+                            "name": "Charm | POP Art",
+                            "reference": {
+                                "price": 93,
+                                "quantity": 1487,
+                                "updated_at": "2025-09-09T01:27:52.396827Z"
+                            }
+                        }
+                    ],
+                    "tradable": 0,
+                    "inspect_link": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20S76561198000000010A41254269433D84833735730698117413",
+                    "cs2_screenshot_id": "4429820939630191010",
+                    "cs2_screenshot_at": "2025-10-14T03:12:15.201532Z",
+                    "is_commodity": false,
+                    "type": "skin",
+                    "rarity_name": "Covert",
+                    "type_name": "Skin",
+                    "item_name": "M4A1-S | Mecha Industries",
+                    "wear_name": "Factory New",
+                    "description": "It is constructed of hardened ceramic panels.\\n\\n<i>Featuring all new technology</i>",
+                    "collection": "The Gamma Collection",
+                    "serialized_inspect": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20CB001B27CC4841F009C963FC953FA3E762362834ACD545D99C0AAA68CF5F0826EF8B1016EA4CB79BC6E2A458EDFEA372B66B71FFDF5C309F0A46F7BEBF2C0916A9F6D9581A29870A72036CEC5316DEB53D84924B8413F36514143E8BEBF1BB625B1780F87197BEB894B1468184EE59808A9FFD8622267817092ADCFC3E02A21E1E81BD346CE63DB8AC4769819DF62C5352D38B43276E56F5FBF814C283",
+                    "gs_sig": "782a48bc73464fcef880"
+                },
+                "is_seller": false,
+                "min_offer_price": 25063,
+                "max_offer_discount": 100,
+                "is_watchlisted": false,
+                "watchers": 0,
+                "sold_at": "2024-09-19T05:45:00.179145Z"
+            },
+            "trade_url": "https://steamcommunity.com/tradeoffer/new/?partner=00000000&token=XXXXXXXX",
+            "trade_token": "XXXXXXXX",
+            "wait_for_cancel_ping": false,
+            "is_settlement_period": true
+        },
+        {
+            "id": "969629414783110059",
+            "created_at": "2024-01-24T17:34:19.806837Z",
+            "buyer_id": "76561190000000001",
+            "buyer": {
+                "avatar": "https://avatars.steamstatic.com/dummy_avatar_000_full.jpg",
+                "away": false,
+                "flags": 48,
+                "online": false,
+                "stall_public": false,
+                "statistics": {
+                    "median_trade_time": 0,
+                    "total_avoided_trades": 0,
+                    "total_failed_trades": 0,
+                    "total_trades": 0,
+                    "total_verified_trades": 0
+                },
+                "steam_id": "76561190000000001",
+                "username": "buyer_user"
+            },
+            "seller_id": "76561198000000011",
+            "seller": {
+                "avatar": "https://avatars.steamstatic.com/dummy_avatar_011_full.jpg",
+                "away": false,
+                "flags": 48,
+                "online": false,
+                "stall_public": false,
+                "statistics": {
+                    "median_trade_time": 880,
+                    "total_avoided_trades": 0,
+                    "total_failed_trades": 0,
+                    "total_trades": 4,
+                    "total_verified_trades": 4
+                },
+                "steam_id": "76561198000000011",
+                "username": "seller_011"
+            },
+            "contract_id": "594161330650083341",
+            "accepted_at": "2025-12-20T00:04:05.983072Z",
+            "state": "verified",
+            "verification_mode": "escrow",
+            "steam_offer": {
+                "id": "7490102422",
+                "state": 3,
+                "is_from_seller": false,
+                "can_cancel_at": "2024-12-31T04:39:26.850781Z",
+                "sent_at": "2025-05-23T05:47:54.205336Z",
+                "deadline_at": "2024-07-08T10:26:24.239210Z",
+                "updated_at": "2025-09-06T08:36:56Z"
+            },
+            "verify_sale_at": "2024-01-28T06:09:07Z",
+            "verified_at": "2025-10-21T15:27:00.270049Z",
+            "inventory_check_status": 1,
+            "trade_protection_ends_at": "2024-06-20T16:07:29Z",
+            "contract": {
+                "id": "594161330650083341",
+                "created_at": "2025-03-15T10:01:47.847455Z",
+                "type": "buy_now",
+                "price": 34430,
+                "state": "sold",
+                "seller": {
+                    "away": false,
+                    "flags": 48,
+                    "obfuscated_id": "94265408870738868077",
+                    "online": false,
+                    "stall_public": false,
+                    "statistics": {
+                        "median_trade_time": 880,
+                        "total_avoided_trades": 0,
+                        "total_failed_trades": 0,
+                        "total_trades": 4,
+                        "total_verified_trades": 4
+                    }
+                },
+                "reference": {
+                    "base_price": 26031,
+                    "float_factor": 0.96845883,
+                    "predicted_price": 25210,
+                    "quantity": 75,
+                    "last_updated": "2024-08-02T09:45:41.611240Z"
+                },
+                "item": {
+                    "asset_id": "62111087212",
+                    "def_index": 60,
+                    "paint_index": 587,
+                    "paint_seed": 904,
+                    "float_value": 0.06915842741727829,
+                    "icon_url": "c9RetMuoKdFtKeDohMqHjHV6UvvEmMl0h_u2VG6VNbKzd6mcPMSvfHkRFh5dGaHhIxcnBxYk8F64kFAQ4nvqe9Qr77G6FlznFqM4s3jdoTcnwkQVW2krcMGA3WG6o4rWdcj0jTnBnAkfBW_a3GOZ8NlmtNlDg7vxrjrm1rt0yr3Wk8R9glHsraMiaO17zvRm383amYoC8DDdnPOLyFdxhiL7zPf_",
+                    "d_param": "1520187383373094851",
+                    "is_stattrak": true,
+                    "is_souvenir": false,
+                    "rarity": 6,
+                    "quality": 9,
+                    "market_hash_name": "StatTrak™ M4A1-S | Mecha Industries (Factory New)",
+                    "tradable": 0,
+                    "inspect_link": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2095C61BB3B2592477EC7D3E467A64D2CA92014530DCF201AB5FBFE733",
+                    "cs2_screenshot_id": "359318936897996294",
+                    "cs2_screenshot_at": "2024-09-01T17:00:08.204966Z",
+                    "is_commodity": false,
+                    "type": "skin",
+                    "rarity_name": "Covert",
+                    "type_name": "Skin",
+                    "item_name": "M4A1-S | Mecha Industries",
+                    "wear_name": "Factory New",
+                    "description": "It is constructed of hardened ceramic panels.\\n\\n<i>Featuring all new technology</i>",
+                    "collection": "The Gamma Collection",
+                    "serialized_inspect": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2095C61BB3B2592477EC7D3E467A64D2CA92014530DCF201AB5FBFE733",
+                    "gs_sig": "278495a806cd0e89ec67"
+                },
+                "is_seller": false,
+                "min_offer_price": 23501,
+                "max_offer_discount": 534,
+                "is_watchlisted": false,
+                "watchers": 0,
+                "sold_at": "2024-01-10T14:58:12.171748Z"
+            },
+            "trade_url": "https://steamcommunity.com/tradeoffer/new/?partner=00000000&token=XXXXXXXX",
+            "trade_token": "XXXXXXXX",
+            "wait_for_cancel_ping": false,
+            "is_settlement_period": true
+        },
+        {
+            "id": "526040932866362655",
+            "created_at": "2025-12-27T09:32:38.015482Z",
+            "buyer_id": "76561190000000001",
+            "buyer": {
+                "avatar": "https://avatars.steamstatic.com/dummy_avatar_000_full.jpg",
+                "away": false,
+                "flags": 48,
+                "online": false,
+                "stall_public": false,
+                "statistics": {
+                    "median_trade_time": 0,
+                    "total_avoided_trades": 0,
+                    "total_failed_trades": 0,
+                    "total_trades": 0,
+                    "total_verified_trades": 0
+                },
+                "steam_id": "76561190000000001",
+                "username": "buyer_user"
+            },
+            "seller_id": "76561198000000012",
+            "seller": {
+                "avatar": "https://avatars.steamstatic.com/dummy_avatar_012_full.jpg",
+                "away": false,
+                "flags": 48,
+                "online": false,
+                "stall_public": true,
+                "statistics": {
+                    "median_trade_time": 67,
+                    "total_avoided_trades": 0,
+                    "total_failed_trades": 2,
+                    "total_trades": 1778,
+                    "total_verified_trades": 1776
+                },
+                "steam_id": "76561198000000012",
+                "username": "seller_012"
+            },
+            "contract_id": "551844229539462550",
+            "accepted_at": "2024-01-26T00:27:37.196417Z",
+            "state": "verified",
+            "verification_mode": "escrow",
+            "steam_offer": {
+                "id": "7790681258",
+                "state": 3,
+                "is_from_seller": false,
+                "can_cancel_at": "2025-04-29T03:08:42.122973Z",
+                "sent_at": "2024-10-30T12:53:26.164231Z",
+                "deadline_at": "2025-01-30T05:19:13.572138Z",
+                "updated_at": "2025-06-12T03:11:20Z"
+            },
+            "verify_sale_at": "2024-09-19T23:57:27Z",
+            "verified_at": "2025-02-14T03:44:47.944917Z",
+            "inventory_check_status": 1,
+            "trade_protection_ends_at": "2025-12-09T05:44:09Z",
+            "contract": {
+                "id": "551844229539462550",
+                "created_at": "2025-05-31T04:30:34.190489Z",
+                "type": "buy_now",
+                "price": 114,
+                "state": "sold",
+                "seller": {
+                    "avatar": "https://avatars.steamstatic.com/991e6d6e28ebc7b871c0b19b99f24cfe757914eb_full.jpg",
+                    "away": false,
+                    "flags": 48,
+                    "online": false,
+                    "stall_public": true,
+                    "statistics": {
+                        "median_trade_time": 67,
+                        "total_avoided_trades": 0,
+                        "total_failed_trades": 2,
+                        "total_trades": 1778,
+                        "total_verified_trades": 1776
+                    },
+                    "steam_id": "76561198000000012",
+                    "username": "Smook"
+                },
+                "reference": {
+                    "base_price": 103,
+                    "predicted_price": 103,
+                    "quantity": 1665,
+                    "last_updated": "2024-08-03T02:33:18.952850Z"
+                },
+                "item": {
+                    "asset_id": "90970696236",
+                    "def_index": 1209,
+                    "sticker_index": 9484,
+                    "icon_url": "dAjntbbFD2o6FzcQm9yA_V7ANGvAFaJk_90NF45Ru5JcdKgu3EycRaH6rE8C_4Fdl7sTR6SY2wwChC5LrM6T1HtK-A-yIAdJlMCw9XQQfcStPapSOE8GgEdWmht8O1eStxEnNyV4dnf1AnEajhZk_RPdhqsJn8mQbQ5lbUqL9VEYeqhrPkAuPvy",
+                    "rarity": 4,
+                    "market_hash_name": "Sticker | Lorena (Holo)",
+                    "tradable": 0,
+                    "inspect_link": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20S76561198000000012A90970696236D95656999609137283063",
+                    "is_commodity": true,
+                    "type": "sticker",
+                    "rarity_name": "Remarkable",
+                    "type_name": "Sticker",
+                    "item_name": "Lorena (Holo)",
+                    "serialized_inspect": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20709D1831F59B0F3518382A6F79BEF38520243A",
+                    "gs_sig": "c6e246ede57df41c5fdb"
+                },
+                "is_seller": false,
+                "is_watchlisted": false,
+                "watchers": 0,
+                "sold_at": "2024-05-20T02:35:19.539392Z"
+            },
+            "trade_url": "https://steamcommunity.com/tradeoffer/new/?partner=00000000&token=XXXXXXXX",
+            "trade_token": "XXXXXXXX",
+            "wait_for_cancel_ping": false,
+            "is_settlement_period": true
+        },
+        {
+            "id": "549682536738272985",
+            "created_at": "2025-12-05T21:44:32.546625Z",
+            "buyer_id": "76561190000000001",
+            "buyer": {
+                "avatar": "https://avatars.steamstatic.com/dummy_avatar_000_full.jpg",
+                "away": false,
+                "flags": 48,
+                "online": false,
+                "stall_public": false,
+                "statistics": {
+                    "median_trade_time": 0,
+                    "total_avoided_trades": 0,
+                    "total_failed_trades": 0,
+                    "total_trades": 0,
+                    "total_verified_trades": 0
+                },
+                "steam_id": "76561190000000001",
+                "username": "buyer_user"
+            },
+            "seller_id": "76561198000000012",
+            "seller": {
+                "avatar": "https://avatars.steamstatic.com/dummy_avatar_012_full.jpg",
+                "away": false,
+                "flags": 48,
+                "online": false,
+                "stall_public": true,
+                "statistics": {
+                    "median_trade_time": 67,
+                    "total_avoided_trades": 0,
+                    "total_failed_trades": 2,
+                    "total_trades": 1778,
+                    "total_verified_trades": 1776
+                },
+                "steam_id": "76561198000000012",
+                "username": "seller_012"
+            },
+            "contract_id": "508612965001002235",
+            "accepted_at": "2024-03-04T21:14:28.031325Z",
+            "state": "verified",
+            "verification_mode": "escrow",
+            "steam_offer": {
+                "id": "7790681258",
+                "state": 3,
+                "is_from_seller": false,
+                "can_cancel_at": "2024-03-14T02:36:02.605988Z",
+                "sent_at": "2024-10-30T12:53:26.164231Z",
+                "deadline_at": "2024-10-15T00:48:27.514660Z",
+                "updated_at": "2025-06-12T03:11:20Z"
+            },
+            "verify_sale_at": "2024-09-19T23:57:27Z",
+            "verified_at": "2025-08-09T00:06:31.068121Z",
+            "inventory_check_status": 1,
+            "trade_protection_ends_at": "2025-12-09T05:44:09Z",
+            "contract": {
+                "id": "508612965001002235",
+                "created_at": "2024-08-11T04:53:57.196512Z",
+                "type": "buy_now",
+                "price": 132,
+                "state": "sold",
+                "seller": {
+                    "avatar": "https://avatars.steamstatic.com/991e6d6e28ebc7b871c0b19b99f24cfe757914eb_full.jpg",
+                    "away": false,
+                    "flags": 48,
+                    "online": false,
+                    "stall_public": true,
+                    "statistics": {
+                        "median_trade_time": 67,
+                        "total_avoided_trades": 0,
+                        "total_failed_trades": 2,
+                        "total_trades": 1778,
+                        "total_verified_trades": 1776
+                    },
+                    "steam_id": "76561198000000012",
+                    "username": "Smook"
+                },
+                "reference": {
+                    "base_price": 103,
+                    "predicted_price": 103,
+                    "quantity": 1665,
+                    "last_updated": "2025-08-28T03:47:06.552812Z"
+                },
+                "item": {
+                    "asset_id": "61266872812",
+                    "def_index": 1209,
+                    "sticker_index": 9484,
+                    "icon_url": "dAjntbbFD2o6FzcQm9yA_V7ANGvAFaJk_90NF45Ru5JcdKgu3EycRaH6rE8C_4Fdl7sTR6SY2wwChC5LrM6T1HtK-A-yIAdJlMCw9XQQfcStPapSOE8GgEdWmht8O1eStxEnNyV4dnf1AnEajhZk_RPdhqsJn8mQbQ5lbUqL9VEYeqhrPkAuPvy",
+                    "rarity": 4,
+                    "market_hash_name": "Sticker | Lorena (Holo)",
+                    "tradable": 0,
+                    "inspect_link": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20S76561198000000012A61266872812D95656999609137283063",
+                    "is_commodity": true,
+                    "type": "sticker",
+                    "rarity_name": "Remarkable",
+                    "type_name": "Sticker",
+                    "item_name": "Lorena (Holo)",
+                    "serialized_inspect": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20709D1831F59B0F3518382A6F79BEF38520243A",
+                    "gs_sig": "c6e246ede57df41c5fdb"
+                },
+                "is_seller": false,
+                "is_watchlisted": false,
+                "watchers": 0,
+                "sold_at": "2024-05-20T02:35:19.539392Z"
+            },
+            "trade_url": "https://steamcommunity.com/tradeoffer/new/?partner=00000000&token=XXXXXXXX",
+            "trade_token": "XXXXXXXX",
+            "wait_for_cancel_ping": false,
+            "is_settlement_period": true
+        },
+        {
+            "id": "616184563420683827",
+            "created_at": "2025-09-26T18:40:25.326071Z",
+            "buyer_id": "76561190000000001",
+            "buyer": {
+                "avatar": "https://avatars.steamstatic.com/dummy_avatar_000_full.jpg",
+                "away": false,
+                "flags": 48,
+                "online": false,
+                "stall_public": false,
+                "statistics": {
+                    "median_trade_time": 0,
+                    "total_avoided_trades": 0,
+                    "total_failed_trades": 0,
+                    "total_trades": 0,
+                    "total_verified_trades": 0
+                },
+                "steam_id": "76561190000000001",
+                "username": "buyer_user"
+            },
+            "seller_id": "76561198000000013",
+            "seller": {
+                "avatar": "https://avatars.steamstatic.com/dummy_avatar_013_full.jpg",
+                "away": false,
+                "flags": 48,
+                "online": false,
+                "stall_public": false,
+                "statistics": {
+                    "median_trade_time": 970,
+                    "total_avoided_trades": 0,
+                    "total_failed_trades": 0,
+                    "total_trades": 12153,
+                    "total_verified_trades": 12153
+                },
+                "steam_id": "76561198000000013",
+                "username": "seller_013"
+            },
+            "contract_id": "757091776566092787",
+            "accepted_at": "2025-09-11T20:47:35.947086Z",
+            "state": "verified",
+            "verification_mode": "escrow",
+            "steam_offer": {
+                "id": "4283652251",
+                "state": 3,
+                "is_from_seller": false,
+                "can_cancel_at": "2024-06-20T05:13:27.344677Z",
+                "sent_at": "2025-04-15T12:13:24.062833Z",
+                "deadline_at": "2025-10-16T19:19:20.204455Z",
+                "updated_at": "2024-02-20T09:32:01Z"
+            },
+            "verify_sale_at": "2024-09-19T23:57:27Z",
+            "verified_at": "2025-04-12T14:01:39.225647Z",
+            "inventory_check_status": 1,
+            "trade_protection_ends_at": "2025-12-09T05:44:09Z",
+            "contract": {
+                "id": "757091776566092787",
+                "created_at": "2025-02-24T05:18:16.474218Z",
+                "type": "buy_now",
+                "price": 158,
+                "state": "sold",
+                "seller": {
+                    "away": false,
+                    "flags": 48,
+                    "obfuscated_id": "7064311762067574655",
+                    "online": false,
+                    "stall_public": false,
+                    "statistics": {
+                        "median_trade_time": 970,
+                        "total_avoided_trades": 0,
+                        "total_failed_trades": 0,
+                        "total_trades": 12153,
+                        "total_verified_trades": 12153
+                    }
+                },
+                "reference": {
+                    "base_price": 103,
+                    "predicted_price": 103,
+                    "quantity": 1665,
+                    "last_updated": "2024-11-23T11:35:45.061927Z"
+                },
+                "item": {
+                    "asset_id": "54672989776",
+                    "def_index": 1209,
+                    "sticker_index": 9484,
+                    "icon_url": "dAjntbbFD2o6FzcQm9yA_V7ANGvAFaJk_90NF45Ru5JcdKgu3EycRaH6rE8C_4Fdl7sTR6SY2wwChC5LrM6T1HtK-A-yIAdJlMCw9XQQfcStPapSOE8GgEdWmht8O1eStxEnNyV4dnf1AnEajhZk_RPdhqsJn8mQbQ5lbUqL9VEYeqhrPkAuPvy",
+                    "rarity": 4,
+                    "market_hash_name": "Sticker | Lorena (Holo)",
+                    "tradable": 0,
+                    "inspect_link": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20709D1831F59B0F3518382A6F79BEF38520243A",
+                    "is_commodity": true,
+                    "type": "sticker",
+                    "rarity_name": "Remarkable",
+                    "type_name": "Sticker",
+                    "item_name": "Lorena (Holo)",
+                    "serialized_inspect": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20709D1831F59B0F3518382A6F79BEF38520243A",
+                    "gs_sig": "c6e246ede57df41c5fdb"
+                },
+                "is_seller": false,
+                "is_watchlisted": false,
+                "watchers": 0,
+                "sold_at": "2024-05-20T02:35:19.539392Z"
+            },
+            "trade_url": "https://steamcommunity.com/tradeoffer/new/?partner=00000000&token=XXXXXXXX",
+            "trade_token": "XXXXXXXX",
+            "wait_for_cancel_ping": false,
+            "is_settlement_period": true
+        },
+        {
+            "id": "683999324830945633",
+            "created_at": "2024-03-03T06:33:19.331003Z",
+            "buyer_id": "76561190000000001",
+            "buyer": {
+                "avatar": "https://avatars.steamstatic.com/dummy_avatar_000_full.jpg",
+                "away": false,
+                "flags": 48,
+                "online": false,
+                "stall_public": false,
+                "statistics": {
+                    "median_trade_time": 0,
+                    "total_avoided_trades": 0,
+                    "total_failed_trades": 0,
+                    "total_trades": 0,
+                    "total_verified_trades": 0
+                },
+                "steam_id": "76561190000000001",
+                "username": "buyer_user"
+            },
+            "seller_id": "76561198000000014",
+            "seller": {
+                "avatar": "https://avatars.steamstatic.com/dummy_avatar_014_full.jpg",
+                "away": false,
+                "flags": 48,
+                "online": false,
+                "stall_public": false,
+                "statistics": {
+                    "median_trade_time": 362,
+                    "total_avoided_trades": 0,
+                    "total_failed_trades": 0,
+                    "total_trades": 11424,
+                    "total_verified_trades": 11424
+                },
+                "steam_id": "76561198000000014",
+                "username": "seller_014"
+            },
+            "contract_id": "253353984340067839",
+            "accepted_at": "2025-07-30T14:17:06.913757Z",
+            "state": "verified",
+            "verification_mode": "escrow",
+            "steam_offer": {
+                "id": "6667657554",
+                "state": 3,
+                "is_from_seller": false,
+                "can_cancel_at": "2024-01-10T09:46:00.619398Z",
+                "sent_at": "2024-05-02T03:14:30.959864Z",
+                "deadline_at": "2025-12-06T18:03:32.193195Z",
+                "updated_at": "2024-12-07T01:12:18Z"
+            },
+            "verify_sale_at": "2024-09-19T23:57:27Z",
+            "verified_at": "2024-03-07T20:32:29.446180Z",
+            "inventory_check_status": 1,
+            "trade_protection_ends_at": "2025-12-09T05:44:09Z",
+            "contract": {
+                "id": "253353984340067839",
+                "created_at": "2024-02-16T10:10:37.293539Z",
+                "type": "buy_now",
+                "price": 90,
+                "state": "sold",
+                "seller": {
+                    "away": false,
+                    "flags": 48,
+                    "obfuscated_id": "44259778592996283200",
+                    "online": false,
+                    "stall_public": false,
+                    "statistics": {
+                        "median_trade_time": 362,
+                        "total_avoided_trades": 0,
+                        "total_failed_trades": 0,
+                        "total_trades": 11424,
+                        "total_verified_trades": 11424
+                    }
+                },
+                "reference": {
+                    "base_price": 68,
+                    "predicted_price": 68,
+                    "quantity": 1403,
+                    "last_updated": "2024-03-04T21:50:27.332854Z"
+                },
+                "item": {
+                    "asset_id": "10706586144",
+                    "def_index": 1209,
+                    "sticker_index": 9485,
+                    "icon_url": "RptvWdotO1kBN96Op6Yh-7g2gppjiPPzzjf9NF93w3qzjgsFZ_eSwpYFZFYkAlKXWxnMtYeAHcfEUZ13A3JHycS83r0vC4_Nvl7CFjZw_754R88xKyf8tJFBKNna3nPxyhjjIp4B0jzfsIaGSY3YLMqd5XU3llZdh7AKw3SA7lOpf053pL5YgV",
+                    "rarity": 4,
+                    "market_hash_name": "Sticker | Lucas (Holo)",
+                    "tradable": 0,
+                    "inspect_link": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20709C855A8E2BE0DA7E9A1D17036E20D18E9BC2",
+                    "is_commodity": true,
+                    "type": "sticker",
+                    "rarity_name": "Remarkable",
+                    "type_name": "Sticker",
+                    "item_name": "Lucas (Holo)",
+                    "serialized_inspect": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20709C855A8E2BE0DA7E9A1D17036E20D18E9BC2",
+                    "gs_sig": "4a0434f91f17cec334b5"
+                },
+                "is_seller": false,
+                "is_watchlisted": false,
+                "watchers": 0,
+                "sold_at": "2025-05-24T17:40:54.992048Z"
+            },
+            "trade_url": "https://steamcommunity.com/tradeoffer/new/?partner=00000000&token=XXXXXXXX",
+            "trade_token": "XXXXXXXX",
+            "wait_for_cancel_ping": false,
+            "is_settlement_period": true
+        },
+        {
+            "id": "256703152712129477",
+            "created_at": "2025-04-28T00:30:45.911086Z",
+            "buyer_id": "76561190000000001",
+            "buyer": {
+                "avatar": "https://avatars.steamstatic.com/dummy_avatar_000_full.jpg",
+                "away": false,
+                "flags": 48,
+                "online": false,
+                "stall_public": false,
+                "statistics": {
+                    "median_trade_time": 0,
+                    "total_avoided_trades": 0,
+                    "total_failed_trades": 0,
+                    "total_trades": 0,
+                    "total_verified_trades": 0
+                },
+                "steam_id": "76561190000000001",
+                "username": "buyer_user"
+            },
+            "seller_id": "76561198000000014",
+            "seller": {
+                "avatar": "https://avatars.steamstatic.com/dummy_avatar_014_full.jpg",
+                "away": false,
+                "flags": 48,
+                "online": false,
+                "stall_public": false,
+                "statistics": {
+                    "median_trade_time": 362,
+                    "total_avoided_trades": 0,
+                    "total_failed_trades": 0,
+                    "total_trades": 11424,
+                    "total_verified_trades": 11424
+                },
+                "steam_id": "76561198000000014",
+                "username": "seller_014"
+            },
+            "contract_id": "203609091777198770",
+            "accepted_at": "2025-03-27T07:38:34.113826Z",
+            "state": "verified",
+            "verification_mode": "escrow",
+            "steam_offer": {
+                "id": "6667657554",
+                "state": 3,
+                "is_from_seller": false,
+                "can_cancel_at": "2025-12-29T10:55:52.071712Z",
+                "sent_at": "2024-05-02T03:14:30.959864Z",
+                "deadline_at": "2024-02-21T09:43:25.915013Z",
+                "updated_at": "2024-12-07T01:12:18Z"
+            },
+            "verify_sale_at": "2024-09-19T23:57:27Z",
+            "verified_at": "2025-12-01T04:29:53.421347Z",
+            "inventory_check_status": 1,
+            "trade_protection_ends_at": "2025-12-09T05:44:09Z",
+            "contract": {
+                "id": "203609091777198770",
+                "created_at": "2025-05-02T23:48:17.792054Z",
+                "type": "buy_now",
+                "price": 66,
+                "state": "sold",
+                "seller": {
+                    "away": false,
+                    "flags": 48,
+                    "obfuscated_id": "44259778592996283200",
+                    "online": false,
+                    "stall_public": false,
+                    "statistics": {
+                        "median_trade_time": 362,
+                        "total_avoided_trades": 0,
+                        "total_failed_trades": 0,
+                        "total_trades": 11424,
+                        "total_verified_trades": 11424
+                    }
+                },
+                "reference": {
+                    "base_price": 68,
+                    "predicted_price": 68,
+                    "quantity": 1403,
+                    "last_updated": "2025-07-28T17:44:37.935959Z"
+                },
+                "item": {
+                    "asset_id": "40034507921",
+                    "def_index": 1209,
+                    "sticker_index": 9485,
+                    "icon_url": "RptvWdotO1kBN96Op6Yh-7g2gppjiPPzzjf9NF93w3qzjgsFZ_eSwpYFZFYkAlKXWxnMtYeAHcfEUZ13A3JHycS83r0vC4_Nvl7CFjZw_754R88xKyf8tJFBKNna3nPxyhjjIp4B0jzfsIaGSY3YLMqd5XU3llZdh7AKw3SA7lOpf053pL5YgV",
+                    "rarity": 4,
+                    "market_hash_name": "Sticker | Lucas (Holo)",
+                    "tradable": 0,
+                    "inspect_link": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20709C855A8E2BE0DA7E9A1D17036E20D18E9BC2",
+                    "is_commodity": true,
+                    "type": "sticker",
+                    "rarity_name": "Remarkable",
+                    "type_name": "Sticker",
+                    "item_name": "Lucas (Holo)",
+                    "serialized_inspect": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20709C855A8E2BE0DA7E9A1D17036E20D18E9BC2",
+                    "gs_sig": "4a0434f91f17cec334b5"
+                },
+                "is_seller": false,
+                "is_watchlisted": false,
+                "watchers": 0,
+                "sold_at": "2025-05-24T17:40:54.992048Z"
+            },
+            "trade_url": "https://steamcommunity.com/tradeoffer/new/?partner=00000000&token=XXXXXXXX",
+            "trade_token": "XXXXXXXX",
+            "wait_for_cancel_ping": false,
+            "is_settlement_period": true
+        },
+        {
+            "id": "121607018389549458",
+            "created_at": "2024-11-16T09:15:21.545260Z",
+            "buyer_id": "76561190000000001",
+            "buyer": {
+                "avatar": "https://avatars.steamstatic.com/dummy_avatar_000_full.jpg",
+                "away": false,
+                "flags": 48,
+                "online": false,
+                "stall_public": false,
+                "statistics": {
+                    "median_trade_time": 0,
+                    "total_avoided_trades": 0,
+                    "total_failed_trades": 0,
+                    "total_trades": 0,
+                    "total_verified_trades": 0
+                },
+                "steam_id": "76561190000000001",
+                "username": "buyer_user"
+            },
+            "seller_id": "76561198000000015",
+            "seller": {
+                "avatar": "https://avatars.steamstatic.com/dummy_avatar_015_full.jpg",
+                "away": false,
+                "flags": 48,
+                "online": false,
+                "stall_public": true,
+                "statistics": {
+                    "median_trade_time": 1143,
+                    "total_avoided_trades": 4,
+                    "total_failed_trades": 50,
+                    "total_trades": 248,
+                    "total_verified_trades": 198
+                },
+                "steam_id": "76561198000000015",
+                "username": "seller_015"
+            },
+            "contract_id": "517423150658453426",
+            "accepted_at": "2024-01-10T05:39:47.510236Z",
+            "state": "verified",
+            "verification_mode": "escrow",
+            "steam_offer": {
+                "id": "7472938758",
+                "state": 3,
+                "is_from_seller": false,
+                "can_cancel_at": "2024-09-21T20:03:33.847307Z",
+                "sent_at": "2024-09-16T13:22:13.138561Z",
+                "deadline_at": "2024-01-30T23:07:28.131766Z",
+                "updated_at": "2024-04-09T02:34:59Z"
+            },
+            "verify_sale_at": "2025-07-08T15:11:59Z",
+            "verified_at": "2024-10-15T10:03:14.957048Z",
+            "inventory_check_status": 1,
+            "trade_protection_ends_at": "2024-09-06T07:23:50Z",
+            "contract": {
+                "id": "517423150658453426",
+                "created_at": "2025-04-15T12:21:41.240771Z",
+                "type": "buy_now",
+                "price": 2820,
+                "state": "sold",
+                "seller": {
+                    "avatar": "https://avatars.steamstatic.com/ccf0e51b6c74e287962bdc52117d972854e05ea0_full.jpg",
+                    "away": false,
+                    "flags": 48,
+                    "online": true,
+                    "stall_public": true,
+                    "statistics": {
+                        "median_trade_time": 1143,
+                        "total_avoided_trades": 4,
+                        "total_failed_trades": 50,
+                        "total_trades": 248,
+                        "total_verified_trades": 198
+                    },
+                    "steam_id": "76561198000000015",
+                    "username": "Looper"
+                },
+                "reference": {
+                    "base_price": 3179,
+                    "float_factor": 1,
+                    "predicted_price": 3179,
+                    "quantity": 137,
+                    "last_updated": "2025-09-02T00:53:35.169109Z"
+                },
+                "item": {
+                    "asset_id": "882243026",
+                    "def_index": 3,
+                    "paint_index": 44,
+                    "paint_seed": 541,
+                    "float_value": 0.09413734823465347,
+                    "icon_url": "GCnGGeFJbS2LUIY-geSb4RDB43ymHFCqkJAMfVeRk9kKfhDO-r-vtSR4cSGA54FsAuO6C8uWXAM8v3oVwU0g2GrTjtHdwlJDmHUPVZI5EyEBXQ-Ndz2118Sfjd316MaEf0J-7yibLqbJu9KocbM2zqv9oZCNQ2oQ3AHch2mhiszS_MA_7Tdk09-_VkaA-y1EAg",
+                    "d_param": "6188357506635688802",
+                    "is_stattrak": true,
+                    "is_souvenir": false,
+                    "rarity": 4,
+                    "quality": 9,
+                    "market_hash_name": "StatTrak™ Five-SeveN | Case Hardened (Minimal Wear)",
+                    "tradable": 0,
+                    "inspect_link": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20S76561198000000015A882243026D6188357506635688802",
+                    "cs2_screenshot_id": "1653986712477298330",
+                    "cs2_screenshot_at": "2025-11-05T00:53:32.870627Z",
+                    "is_commodity": false,
+                    "type": "skin",
+                    "rarity_name": "Restricted",
+                    "type_name": "Skin",
+                    "item_name": "Five-SeveN | Case Hardened",
+                    "wear_name": "Minimal Wear",
+                    "description": "It has been color case-hardened through the application of wood charcoal at high temperatures.\\n\\n<i>A little color never hurt anyone</i>",
+                    "collection": "The Arms Deal 2 Collection",
+                    "blue_gem": {
+                        "playside_blue": 14.44
+                    },
+                    "serialized_inspect": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2053FBAA4C752CF47736DCC83B8804DFEC43A8F96DE1A7F73517DF69",
+                    "gs_sig": "ecdd49daeb6315f62da2"
+                },
+                "is_seller": false,
+                "min_offer_price": 3082,
+                "max_offer_discount": 800,
+                "is_watchlisted": false,
+                "watchers": 1,
+                "sold_at": "2024-03-22T17:56:45.499875Z"
+            },
+            "trade_url": "https://steamcommunity.com/tradeoffer/new/?partner=00000000&token=XXXXXXXX",
+            "trade_token": "XXXXXXXX",
+            "wait_for_cancel_ping": false,
+            "is_settlement_period": true
+        }
+    ],
+    "count": 26
+}
