@@ -36,6 +36,8 @@ class CSV_Tail:
     scm_price: int = 0
     skinport_qty: int = 0
     skinport_price: int = 0
+    ignore_fees: bool = False
+    sales_tax_rate: float = 0
 
     @property
     def subtotal(self):
@@ -44,7 +46,7 @@ class CSV_Tail:
     @property
     def sales_tax(self):
         # Sales tax not applicable to stripe fee, only for price of items
-        return SALES_TAX * self.subtotal
+        return self.sales_tax_rate * self.subtotal
 
     @property
     def stripe_fee(self):
@@ -62,7 +64,7 @@ class CSV_Tail:
     @property
     def cost_basis(self):
         if self.total_qty > 0:
-            if IGNORE_FEES:
+            if self.ignore_fees:
                 return self.subtotal / self.total_qty
             else:
                 return self.total_cost / self.total_qty
@@ -78,15 +80,18 @@ def debug(str=None):
 
 # string must have have Z/explicitly be UTC
 # e.g. "2025-10-28T13:31:13.648027Z"
-def convert_iso_str_to_seattle_str(iso_string_utc):
+# see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+def convert_iso_str_to_seattle_str(iso_string_utc, purchase_time_zone):
     dt_utc_aware = datetime.datetime.fromisoformat(iso_string_utc)
     assert dt_utc_aware.tzinfo == datetime.timezone.utc
 
-    dt_seattle = dt_utc_aware.astimezone(ZoneInfo(PURCHASE_TIME_ZONE))
+    dt_seattle = dt_utc_aware.astimezone(ZoneInfo(purchase_time_zone))
     return dt_seattle.strftime("%Y-%m-%d")
 
 
-def parse_csfloat_data(aggregated_data, csfloat_files) -> defaultdict:
+def parse_csfloat_data(
+    aggregated_data, csfloat_files, purchase_time_zone
+) -> defaultdict:
     datas = {}
     for j in csfloat_files:
         with open(j, "r") as file:
@@ -114,7 +119,9 @@ def parse_csfloat_data(aggregated_data, csfloat_files) -> defaultdict:
                     continue
 
                 item_name = transaction["contract"]["item"]["market_hash_name"]
-                date = convert_iso_str_to_seattle_str(transaction["accepted_at"])
+                date = convert_iso_str_to_seattle_str(
+                    transaction["accepted_at"], purchase_time_zone
+                )
 
                 float_value = (
                     None
@@ -166,7 +173,9 @@ def parse_scm_data(aggregated_data, scm_files) -> defaultdict:
     return aggregated_data
 
 
-def parse_skinport_data(aggregated_data, skinport_files) -> defaultdict:
+def parse_skinport_data(
+    aggregated_data, skinport_files, purchase_time_zone
+) -> defaultdict:
     curr_parsed = 0
     expected_parsed = 0
     debug("\nParsing skinport")
@@ -175,7 +184,9 @@ def parse_skinport_data(aggregated_data, skinport_files) -> defaultdict:
             data = json.load(file)
             for order in data["result"]["orders"]:
                 expected_parsed += len(order["sales"])
-                date = convert_iso_str_to_seattle_str(order["created"])
+                date = convert_iso_str_to_seattle_str(
+                    order["created"], purchase_time_zone
+                )
                 for sale in order["sales"]:
                     curr_parsed += 1
                     item_name = sale["marketHashName"]
@@ -284,11 +295,15 @@ def write_csv(aggregated_data, output_file="output.csv"):
     )
 
 
-def write_summary_csv(aggregated_data, output_file="summary_output.csv"):
+def write_summary_csv(
+    aggregated_data, ignore_fees, sales_tax, output_file="summary_output.csv"
+):
     debug("\nPrinting summary CSV")
     summary = {}
     for (item_name, _, _), tail in aggregated_data.items():
-        summary[item_name] = summary.get(item_name, CSV_Tail())
+        summary[item_name] = summary.get(
+            item_name, CSV_Tail(ignore_fees=ignore_fees, sales_tax_rate=sales_tax)
+        )
         summary[item_name].csf_qty += tail.csf_qty
         summary[item_name].csf_price += tail.csf_price
         summary[item_name].scm_qty += tail.scm_qty
@@ -353,7 +368,12 @@ def write_casemove_csv(aggregated_data, output_file="casemove.csv"):
     debug(f"Casemove CSV written to {output_file}")
 
 
-def runner(input_file_dir):
+def runner(
+    input_file_dir=DATA_DIR,
+    purchase_time_zone=PURCHASE_TIME_ZONE,
+    sales_tax=SALES_TAX,
+    ignore_fees=IGNORE_FEES,
+):
     csf_file_names = sorted(
         glob.glob(os.path.join(input_file_dir, "csfloat", "*.json"))
     )
@@ -372,15 +392,17 @@ def runner(input_file_dir):
         f"No files found, please place files in {DATA_DIR}/csfloat/, {DATA_DIR}/scm/, or {DATA_DIR}/skinport/"
     )
 
-    aggregated_data = defaultdict(CSV_Tail)
+    aggregated_data = defaultdict(
+        lambda: CSV_Tail(ignore_fees=ignore_fees, sales_tax_rate=sales_tax)
+    )
 
-    parse_csfloat_data(aggregated_data, csf_file_names)
+    parse_csfloat_data(aggregated_data, csf_file_names, purchase_time_zone)
     parse_scm_data(aggregated_data, scm_file_names)
-    parse_skinport_data(aggregated_data, skinport_file_names)
+    parse_skinport_data(aggregated_data, skinport_file_names, purchase_time_zone)
     write_csv(aggregated_data)
-    write_summary_csv(aggregated_data)
+    write_summary_csv(aggregated_data, ignore_fees, sales_tax)
     # write_casemove_csv(aggregated_data)
 
 
 if __name__ == "__main__":
-    runner(DATA_DIR)
+    runner()

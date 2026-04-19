@@ -14,6 +14,9 @@ import parser
 
 REPO_ROOT = Path(__file__).resolve().parent
 TEST_DIR = REPO_ROOT / "test"
+TEST_IGNORE_FEES = False
+TEST_SALES_TAX = 0.1035
+TEST_PURCHASE_TIME_ZONE = "America/Los_Angeles"
 
 
 @contextmanager
@@ -68,7 +71,12 @@ class ParserUnitTestCase(unittest.TestCase):
         self.debug_patcher.stop()
 
     def make_aggregated_data(self):
-        return defaultdict(parser.CSV_Tail)
+        return defaultdict(
+            lambda: parser.CSV_Tail(
+                ignore_fees=TEST_IGNORE_FEES,
+                sales_tax_rate=TEST_SALES_TAX,
+            )
+        )
 
     def write_json(self, directory, name, content):
         path = Path(directory) / name
@@ -90,13 +98,15 @@ class ParserUnitTestCase(unittest.TestCase):
 class TestConvertIsoStrToSeattleStr(ParserUnitTestCase):
     def test_converts_utc_timestamp_to_purchase_timezone_date(self):
         converted = parser.convert_iso_str_to_seattle_str(
-            "2025-03-24T09:36:35.811079+00:00"
+            "2025-03-24T09:36:35.811079+00:00", TEST_PURCHASE_TIME_ZONE
         )
         self.assertEqual(converted, "2025-03-24")
 
     def test_requires_explicit_utc_timezone(self):
         with self.assertRaises(AssertionError):
-            parser.convert_iso_str_to_seattle_str("2025-03-24T09:36:35.811079")
+            parser.convert_iso_str_to_seattle_str(
+                "2025-03-24T09:36:35.811079", TEST_PURCHASE_TIME_ZONE
+            )
 
 
 class TestParseCSFloatData(ParserUnitTestCase):
@@ -104,7 +114,9 @@ class TestParseCSFloatData(ParserUnitTestCase):
         aggregated_data = self.make_aggregated_data()
 
         parser.parse_csfloat_data(
-            aggregated_data, [str(TEST_DIR / "csfloat" / "test_page0_trades.json")]
+            aggregated_data,
+            [str(TEST_DIR / "csfloat" / "test_page0_trades.json")],
+            TEST_PURCHASE_TIME_ZONE,
         )
 
         eye_of_horus = aggregated_data[
@@ -133,7 +145,9 @@ class TestParseCSFloatData(ParserUnitTestCase):
                 },
             )
 
-            parser.parse_csfloat_data(aggregated_data, [file_path])
+            parser.parse_csfloat_data(
+                aggregated_data, [file_path], TEST_PURCHASE_TIME_ZONE
+            )
 
         row = aggregated_data[("Recoil Case", "2025-03-15", None)]
         self.assertEqual(row.csf_qty, 1)
@@ -158,7 +172,9 @@ class TestParseCSFloatData(ParserUnitTestCase):
             )
 
             with self.assertRaisesRegex(AssertionError, "Failed to parse 1 trades"):
-                parser.parse_csfloat_data(aggregated_data, [file_path])
+                parser.parse_csfloat_data(
+                    aggregated_data, [file_path], TEST_PURCHASE_TIME_ZONE
+                )
 
 
 class TestParseSCMData(ParserUnitTestCase):
@@ -222,7 +238,9 @@ class TestParseSkinportData(ParserUnitTestCase):
         aggregated_data = self.make_aggregated_data()
 
         parser.parse_skinport_data(
-            aggregated_data, [str(TEST_DIR / "skinport" / "skinport_trades.json")]
+            aggregated_data,
+            [str(TEST_DIR / "skinport" / "skinport_trades.json")],
+            TEST_PURCHASE_TIME_ZONE,
         )
 
         lorena = aggregated_data[("Sticker | Lorena (Holo)", "2025-09-11", None)]
@@ -261,7 +279,9 @@ class TestParseSkinportData(ParserUnitTestCase):
                 },
             )
 
-            parser.parse_skinport_data(aggregated_data, [file_path])
+            parser.parse_skinport_data(
+                aggregated_data, [file_path], TEST_PURCHASE_TIME_ZONE
+            )
 
         row = aggregated_data[("Sticker | Lorena (Holo)", "2025-09-11", None)]
         self.assertEqual(row.skinport_qty, 2)
@@ -272,10 +292,16 @@ class TestWriteCsv(ParserUnitTestCase):
     def test_writes_sorted_rows_and_serializes_none_float_values(self):
         aggregated_data = self.make_aggregated_data()
         aggregated_data[("B Item", "2025-01-02", 0.5)] = parser.CSV_Tail(
-            csf_qty=1, csf_price=100
+            csf_qty=1,
+            csf_price=100,
+            ignore_fees=TEST_IGNORE_FEES,
+            sales_tax_rate=TEST_SALES_TAX,
         )
         aggregated_data[("A Item", "2025-01-01", None)] = parser.CSV_Tail(
-            scm_qty=2, scm_price=250
+            scm_qty=2,
+            scm_price=250,
+            ignore_fees=TEST_IGNORE_FEES,
+            sales_tax_rate=TEST_SALES_TAX,
         )
 
         with tempfile.TemporaryDirectory() as tmpdir:
@@ -294,15 +320,28 @@ class TestWriteSummaryCsv(ParserUnitTestCase):
     def test_groups_rows_by_item_name(self):
         aggregated_data = self.make_aggregated_data()
         aggregated_data[("Item A", "2025-01-01", None)] = parser.CSV_Tail(
-            csf_qty=1, csf_price=100
+            csf_qty=1,
+            csf_price=100,
+            ignore_fees=TEST_IGNORE_FEES,
+            sales_tax_rate=TEST_SALES_TAX,
         )
         aggregated_data[("Item A", "2025-01-02", 0.4)] = parser.CSV_Tail(
-            scm_qty=2, scm_price=250, skinport_qty=1, skinport_price=50
+            scm_qty=2,
+            scm_price=250,
+            skinport_qty=1,
+            skinport_price=50,
+            ignore_fees=TEST_IGNORE_FEES,
+            sales_tax_rate=TEST_SALES_TAX,
         )
 
         with tempfile.TemporaryDirectory() as tmpdir:
             output_file = Path(tmpdir) / "summary_output.csv"
-            parser.write_summary_csv(aggregated_data, output_file=str(output_file))
+            parser.write_summary_csv(
+                aggregated_data,
+                TEST_IGNORE_FEES,
+                TEST_SALES_TAX,
+                output_file=str(output_file),
+            )
             rows = self.read_csv_rows(output_file)
 
         self.assertEqual(
@@ -319,7 +358,10 @@ class TestWriteCasemoveCsv(ParserUnitTestCase):
     def test_writes_cost_basis_rows_for_casemove_import(self):
         aggregated_data = self.make_aggregated_data()
         aggregated_data[("Item A", "2025-01-01", None)] = parser.CSV_Tail(
-            csf_qty=1, csf_price=100
+            csf_qty=1,
+            csf_price=100,
+            ignore_fees=TEST_IGNORE_FEES,
+            sales_tax_rate=TEST_SALES_TAX,
         )
 
         with tempfile.TemporaryDirectory() as tmpdir:
@@ -343,7 +385,12 @@ class TestRunner(unittest.TestCase):
 
             buf = io.StringIO()
             with working_directory(tmpdir), redirect_stdout(buf):
-                parser.runner("test")
+                parser.runner(
+                    "test",
+                    purchase_time_zone=TEST_PURCHASE_TIME_ZONE,
+                    sales_tax=TEST_SALES_TAX,
+                    ignore_fees=TEST_IGNORE_FEES,
+                )
 
             stdout = buf.getvalue()
             output_csv = (Path(tmpdir) / "output.csv").read_text(encoding="utf-8")
@@ -376,7 +423,12 @@ class TestRunner(unittest.TestCase):
     def test_raises_when_no_input_files_are_found(self):
         with tempfile.TemporaryDirectory() as tmpdir:
             with self.assertRaisesRegex(AssertionError, "No files found"):
-                parser.runner(tmpdir)
+                parser.runner(
+                    tmpdir,
+                    purchase_time_zone=TEST_PURCHASE_TIME_ZONE,
+                    sales_tax=TEST_SALES_TAX,
+                    ignore_fees=TEST_IGNORE_FEES,
+                )
 
 
 if __name__ == "__main__":
