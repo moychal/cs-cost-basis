@@ -14,6 +14,9 @@ import parser
 
 REPO_ROOT = Path(__file__).resolve().parent
 TEST_DIR = REPO_ROOT / "test"
+TEST_OUTPUT_DIR = TEST_DIR / "output"
+EXPECTED_STDOUT_PATH = TEST_DIR / "expected_stdout.txt"
+EXPECTED_OUTPUT_PATH = TEST_DIR / "expected_output.csv"
 TEST_IGNORE_FEES = False
 TEST_SALES_TAX = 0.1035
 TEST_PURCHASE_TIME_ZONE = "America/Los_Angeles"
@@ -66,6 +69,7 @@ class ParserUnitTestCase(unittest.TestCase):
     def setUp(self):
         self.debug_patcher = mock.patch.object(parser, "DEBUG", False)
         self.debug_patcher.start()
+        TEST_OUTPUT_DIR.mkdir(exist_ok=True)
 
     def tearDown(self):
         self.debug_patcher.stop()
@@ -93,6 +97,9 @@ class ParserUnitTestCase(unittest.TestCase):
     def read_csv_rows(self, path):
         with open(path, "r", encoding="utf-8", newline="") as file:
             return list(csv.reader(file))
+
+    def output_path(self, name):
+        return TEST_OUTPUT_DIR / name
 
 
 class TestConvertIsoStrToSeattleStr(ParserUnitTestCase):
@@ -304,10 +311,9 @@ class TestWriteCsv(ParserUnitTestCase):
             sales_tax_rate=TEST_SALES_TAX,
         )
 
-        with tempfile.TemporaryDirectory() as tmpdir:
-            output_file = Path(tmpdir) / "output.csv"
-            parser.write_csv(aggregated_data, output_file=str(output_file))
-            rows = self.read_csv_rows(output_file)
+        output_file = self.output_path("write_csv_test_output.csv")
+        parser.write_csv(aggregated_data, output_file=str(output_file))
+        rows = self.read_csv_rows(output_file)
 
         self.assertEqual(rows[0][0:4], ["Name", "Date", "Float", "CSF Qty"])
         self.assertEqual(rows[1][0:3], ["A Item", "2025-01-01", "None"])
@@ -334,15 +340,14 @@ class TestWriteSummaryCsv(ParserUnitTestCase):
             sales_tax_rate=TEST_SALES_TAX,
         )
 
-        with tempfile.TemporaryDirectory() as tmpdir:
-            output_file = Path(tmpdir) / "summary_output.csv"
-            parser.write_summary_csv(
-                aggregated_data,
-                TEST_IGNORE_FEES,
-                TEST_SALES_TAX,
-                output_file=str(output_file),
-            )
-            rows = self.read_csv_rows(output_file)
+        output_file = self.output_path("write_summary_csv_test_output.csv")
+        parser.write_summary_csv(
+            aggregated_data,
+            TEST_IGNORE_FEES,
+            TEST_SALES_TAX,
+            output_file=str(output_file),
+        )
+        rows = self.read_csv_rows(output_file)
 
         self.assertEqual(
             rows[0][0:4], ["Name", "Total Qty", "Subtotal", "Pre-fee cost basis"]
@@ -364,10 +369,9 @@ class TestWriteCasemoveCsv(ParserUnitTestCase):
             sales_tax_rate=TEST_SALES_TAX,
         )
 
-        with tempfile.TemporaryDirectory() as tmpdir:
-            output_file = Path(tmpdir) / "casemove.csv"
-            parser.write_casemove_csv(aggregated_data, output_file=str(output_file))
-            rows = self.read_csv_rows(output_file)
+        output_file = self.output_path("write_casemove_csv_test_output.csv")
+        parser.write_casemove_csv(aggregated_data, output_file=str(output_file))
+        rows = self.read_csv_rows(output_file)
 
         self.assertEqual(
             rows[0], ["Name", "Date", "Quantity", "Price", "Type", "Note", "Currency"]
@@ -380,27 +384,20 @@ class TestWriteCasemoveCsv(ParserUnitTestCase):
 
 class TestRunner(unittest.TestCase):
     def run_snapshot(self):
-        with tempfile.TemporaryDirectory() as tmpdir:
-            os.symlink(TEST_DIR, Path(tmpdir) / "test", target_is_directory=True)
-
-            buf = io.StringIO()
-            with working_directory(tmpdir), redirect_stdout(buf):
-                parser.runner(
-                    "test",
-                    purchase_time_zone=TEST_PURCHASE_TIME_ZONE,
-                    sales_tax=TEST_SALES_TAX,
-                    ignore_fees=TEST_IGNORE_FEES,
-                )
-
-            stdout = buf.getvalue()
-            output_csv = (Path(tmpdir) / "output.csv").read_text(encoding="utf-8")
-            expected_stdout = (Path(tmpdir) / "test" / "expected_stdout.txt").read_text(
-                encoding="utf-8"
+        buf = io.StringIO()
+        with working_directory(TEST_DIR), redirect_stdout(buf):
+            parser.runner(
+                "",
+                purchase_time_zone=TEST_PURCHASE_TIME_ZONE,
+                sales_tax=TEST_SALES_TAX,
+                ignore_fees=TEST_IGNORE_FEES,
             )
-            expected_csv = (Path(tmpdir) / "test" / "expected_output.csv").read_text(
-                encoding="utf-8"
-            )
-            return stdout, output_csv, expected_stdout, expected_csv
+
+        stdout = buf.getvalue()
+        output_csv = (TEST_OUTPUT_DIR / "output.csv").read_text(encoding="utf-8")
+        expected_stdout = EXPECTED_STDOUT_PATH.read_text(encoding="utf-8")
+        expected_csv = EXPECTED_OUTPUT_PATH.read_text(encoding="utf-8")
+        return stdout, output_csv, expected_stdout, expected_csv
 
     def test_stdout_matches_snapshot(self):
         stdout, _, expected_stdout, _ = self.run_snapshot()
@@ -409,7 +406,7 @@ class TestRunner(unittest.TestCase):
         self.assertEqual(
             stdout,
             expected_stdout,
-            msg="runner stdout did not match expected_stdout.txt",
+            msg="runner stdout did not match test/expected_stdout.txt",
         )
 
     def test_csv_matches_snapshot(self):
@@ -417,7 +414,9 @@ class TestRunner(unittest.TestCase):
 
         self.maxDiff = None
         self.assertEqual(
-            output_csv, expected_csv, msg="output.csv did not match expected_output.csv"
+            output_csv,
+            expected_csv,
+            msg="output.csv did not match test/expected_output.csv",
         )
 
     def test_raises_when_no_input_files_are_found(self):

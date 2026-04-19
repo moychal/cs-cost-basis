@@ -207,7 +207,7 @@ def parse_skinport_data(
 
 
 # should actually write to csv
-def write_csv(aggregated_data, output_file="output.csv"):
+def write_csv(aggregated_data, output_file="output/output.csv"):
     # Print CSV
     debug("\nPrinting CSV")
     with open(output_file, "w", encoding="utf-8") as file:
@@ -296,7 +296,7 @@ def write_csv(aggregated_data, output_file="output.csv"):
 
 
 def write_summary_csv(
-    aggregated_data, ignore_fees, sales_tax, output_file="summary_output.csv"
+    aggregated_data, ignore_fees, sales_tax, output_file="output/summary_output.csv"
 ):
     debug("\nPrinting summary CSV")
     summary = {}
@@ -342,7 +342,7 @@ def write_summary_csv(
     debug(f"Aggregate CSV written to {output_file}")
 
 
-def write_casemove_csv(aggregated_data, output_file="casemove.csv"):
+def write_casemove_csv(aggregated_data, output_file="output/casemove.csv"):
     debug("\nPrinting casemove CSV")
 
     with open(output_file, "w", encoding="utf-8") as file:
@@ -401,7 +401,7 @@ def runner(
     parse_skinport_data(aggregated_data, skinport_file_names, purchase_time_zone)
     write_csv(aggregated_data)
     write_summary_csv(aggregated_data, ignore_fees, sales_tax)
-    # write_casemove_csv(aggregated_data)
+    write_casemove_csv(aggregated_data)
 
 
 if __name__ == "__main__":

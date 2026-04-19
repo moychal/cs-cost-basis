@@ -1,6 +1,5 @@
 __pycache__/
 data/**
 latest/**
-casemove.csv
-output.csv
-summary_output.csv
+output/**/*.csv
+test/output/**/*.csv
