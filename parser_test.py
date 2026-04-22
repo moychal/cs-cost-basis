@@ -1,4 +1,5 @@
 import csv
+import datetime
 import io
 import json
 import os
@@ -12,13 +13,17 @@ from unittest import mock
 import parser
 
 
+def date(year, month, day):
+    return datetime.date(year, month, day)
+
+
 REPO_ROOT = Path(__file__).resolve().parent
 TEST_DIR = REPO_ROOT / "test"
 TEST_OUTPUT_DIR = TEST_DIR / "output"
 EXPECTED_STDOUT_PATH = TEST_DIR / "expected_stdout.txt"
 EXPECTED_OUTPUT_PATH = TEST_DIR / "expected_output.csv"
 TEST_IGNORE_FEES = False
-TEST_SALES_TAX = 0.1035
+TEST_SALES_TAX = {2024: 0.1035, 2025: 0.1035, 2026: 0.1055}
 TEST_PURCHASE_TIME_ZONE = "America/Los_Angeles"
 
 
@@ -136,6 +141,40 @@ class TestParseCSFloatData(ParserUnitTestCase):
         self.assertEqual(recoil_case.csf_qty, 5)
         self.assertEqual(recoil_case.csf_price, 140)
 
+    def test_uses_sales_tax_rate_for_each_trade_year(self):
+        aggregated_data = self.make_aggregated_data()
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            file_path = self.write_json(
+                tmpdir,
+                "csfloat_years.json",
+                {
+                    "count": 2,
+                    "trades": [
+                        build_csfloat_trade(
+                            item_name="2025 Case",
+                            accepted_at="2025-03-15T18:24:54.961958+00:00",
+                            price=100,
+                        ),
+                        build_csfloat_trade(
+                            item_name="2026 Case",
+                            accepted_at="2026-03-15T18:24:54.961958+00:00",
+                            price=100,
+                        ),
+                    ],
+                },
+            )
+
+            parser.parse_csfloat_data(
+                aggregated_data, [file_path], TEST_PURCHASE_TIME_ZONE
+            )
+
+        row_2025 = aggregated_data[("2025 Case", "2025-03-15", None)]
+        row_2026 = aggregated_data[("2026 Case", "2026-03-15", None)]
+
+        self.assertAlmostEqual(row_2025.sales_tax, 100 * TEST_SALES_TAX[2025])
+        self.assertAlmostEqual(row_2026.sales_tax, 100 * TEST_SALES_TAX[2026])
+
     def test_skips_non_verified_trades_after_counting_them_as_parsed(self):
         aggregated_data = self.make_aggregated_data()
 
@@ -200,6 +239,58 @@ class TestParseSCMData(ParserUnitTestCase):
         self.assertEqual(lucas.scm_qty, 2)
         self.assertEqual(lucas.scm_price, 142)
 
+    def test_uses_sales_tax_rate_for_each_trade_year(self):
+        aggregated_data = self.make_aggregated_data()
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            file_path = self.write_csv_fixture(
+                tmpdir,
+                "scm_years.csv",
+                [
+                    [
+                        "Index",
+                        "Credit",
+                        "Transaction ID",
+                        "App ID",
+                        "Name",
+                        "Price",
+                        "Listed On",
+                        "Acted On",
+                        "Amount",
+                    ],
+                    [
+                        1,
+                        0,
+                        "1-2",
+                        730,
+                        "2025 Case",
+                        "$1.00",
+                        "2025-15-03",
+                        "2025-15-03",
+                        1,
+                    ],
+                    [
+                        2,
+                        0,
+                        "2-3",
+                        730,
+                        "2026 Case",
+                        "$1.00",
+                        "2026-15-03",
+                        "2026-15-03",
+                        1,
+                    ],
+                ],
+            )
+
+            parser.parse_scm_data(aggregated_data, [file_path])
+
+        row_2025 = aggregated_data[("2025 Case", "2025-03-15", None)]
+        row_2026 = aggregated_data[("2026 Case", "2026-03-15", None)]
+
+        self.assertAlmostEqual(row_2025.sales_tax, 100 * TEST_SALES_TAX[2025])
+        self.assertAlmostEqual(row_2026.sales_tax, 100 * TEST_SALES_TAX[2026])
+
     def test_rewrites_2024_acted_on_dates_to_2025(self):
         aggregated_data = self.make_aggregated_data()
 
@@ -258,6 +349,49 @@ class TestParseSkinportData(ParserUnitTestCase):
         self.assertEqual(recoil_case.skinport_qty, 1)
         self.assertEqual(recoil_case.skinport_price, 40)
 
+    def test_uses_sales_tax_rate_for_each_trade_year(self):
+        aggregated_data = self.make_aggregated_data()
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            file_path = self.write_json(
+                tmpdir,
+                "skinport_years.json",
+                {
+                    "result": {
+                        "orders": [
+                            {
+                                "created": "2025-09-11T15:12:34.567+00:00",
+                                "sales": [
+                                    build_skinport_sale(
+                                        item_name="2025 Sticker",
+                                        sale_price=100,
+                                    )
+                                ],
+                            },
+                            {
+                                "created": "2026-09-11T15:12:34.567+00:00",
+                                "sales": [
+                                    build_skinport_sale(
+                                        item_name="2026 Sticker",
+                                        sale_price=100,
+                                    )
+                                ],
+                            },
+                        ]
+                    }
+                },
+            )
+
+            parser.parse_skinport_data(
+                aggregated_data, [file_path], TEST_PURCHASE_TIME_ZONE
+            )
+
+        row_2025 = aggregated_data[("2025 Sticker", "2025-09-11", None)]
+        row_2026 = aggregated_data[("2026 Sticker", "2026-09-11", None)]
+
+        self.assertAlmostEqual(row_2025.sales_tax, 100 * TEST_SALES_TAX[2025])
+        self.assertAlmostEqual(row_2026.sales_tax, 100 * TEST_SALES_TAX[2026])
+
     def test_hits_expected_parsed_assertion_with_minimal_valid_order(self):
         aggregated_data = self.make_aggregated_data()
 
@@ -299,12 +433,14 @@ class TestWriteCsv(ParserUnitTestCase):
     def test_writes_sorted_rows_and_serializes_none_float_values(self):
         aggregated_data = self.make_aggregated_data()
         aggregated_data[("B Item", "2025-01-02", 0.5)] = parser.CSV_Tail(
+            date=date(2025, 1, 2),
             csf_qty=1,
             csf_price=100,
             ignore_fees=TEST_IGNORE_FEES,
             sales_tax_rate=TEST_SALES_TAX,
         )
         aggregated_data[("A Item", "2025-01-01", None)] = parser.CSV_Tail(
+            date=date(2025, 1, 1),
             scm_qty=2,
             scm_price=250,
             ignore_fees=TEST_IGNORE_FEES,
@@ -326,12 +462,14 @@ class TestWriteSummaryCsv(ParserUnitTestCase):
     def test_groups_rows_by_item_name(self):
         aggregated_data = self.make_aggregated_data()
         aggregated_data[("Item A", "2025-01-01", None)] = parser.CSV_Tail(
+            date=date(2025, 1, 1),
             csf_qty=1,
             csf_price=100,
             ignore_fees=TEST_IGNORE_FEES,
             sales_tax_rate=TEST_SALES_TAX,
         )
         aggregated_data[("Item A", "2025-01-02", 0.4)] = parser.CSV_Tail(
+            date=date(2025, 1, 2),
             scm_qty=2,
             scm_price=250,
             skinport_qty=1,
@@ -363,6 +501,7 @@ class TestWriteCasemoveCsv(ParserUnitTestCase):
     def test_writes_cost_basis_rows_for_casemove_import(self):
         aggregated_data = self.make_aggregated_data()
         aggregated_data[("Item A", "2025-01-01", None)] = parser.CSV_Tail(
+            date=date(2025, 1, 1),
             csf_qty=1,
             csf_price=100,
             ignore_fees=TEST_IGNORE_FEES,

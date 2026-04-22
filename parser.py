@@ -5,7 +5,7 @@ import glob
 import json
 import os
 from zoneinfo import ZoneInfo
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
 ### Instructions
 # 1) Inspect and download data from csfloat API, can use adjustable limit. Make sure to start at page 0
@@ -21,7 +21,7 @@ from dataclasses import dataclass
 # Constants
 IGNORE_FEES = False
 STRIPE_FEE = 0.0288
-SALES_TAX = 0.1035
+SALES_TAX_RATES = {2025: 0.1035, 2026: 0.1055}
 PURCHASE_TIME_ZONE = "America/Los_Angeles"  # Seattle
 DEBUG = True
 
@@ -30,6 +30,7 @@ DATA_DIR = "data"
 
 @dataclass
 class CSV_Tail:
+    date: datetime.datetime = None
     csf_qty: int = 0
     csf_price: int = 0
     scm_qty: int = 0
@@ -37,7 +38,7 @@ class CSV_Tail:
     skinport_qty: int = 0
     skinport_price: int = 0
     ignore_fees: bool = False
-    sales_tax_rate: float = 0
+    sales_tax_rate: dict = field(default_factory=dict)
 
     @property
     def subtotal(self):
@@ -46,7 +47,9 @@ class CSV_Tail:
     @property
     def sales_tax(self):
         # Sales tax not applicable to stripe fee, only for price of items
-        return self.sales_tax_rate * self.subtotal
+        year = self.date.year
+        sales_tax = self.sales_tax_rate[year]
+        return sales_tax * self.subtotal
 
     @property
     def stripe_fee(self):
@@ -133,6 +136,7 @@ def parse_csfloat_data(
                 k = (item_name, date, float_value)
                 # Price is represented in cents already
                 price = transaction["contract"]["price"]
+                aggregated_data[k].date = datetime.datetime.strptime(date, "%Y-%m-%d")
                 aggregated_data[k].csf_price += price
                 aggregated_data[k].csf_qty += 1
 
@@ -167,6 +171,7 @@ def parse_scm_data(aggregated_data, scm_files) -> defaultdict:
                 price = int(dollars) * 100 + int(cents)
 
                 key = (name, date, None)
+                aggregated_data[key].date = datetime.datetime.strptime(date, "%Y-%m-%d")
                 aggregated_data[key].scm_qty += qty
                 aggregated_data[key].scm_price += price
             debug(f"{parsed} parsed from {scm_file}")
@@ -196,6 +201,9 @@ def parse_skinport_data(
 
                     # Aggregate by item_name, date, float_value
                     k = (item_name, date, float_value)
+                    aggregated_data[k].date = datetime.datetime.strptime(
+                        date, "%Y-%m-%d"
+                    )
                     aggregated_data[k].skinport_price += price
                     aggregated_data[k].skinport_qty += 1
             debug(f"{curr_parsed}/{expected_parsed} parsed from {skinport_file}")
@@ -300,10 +308,11 @@ def write_summary_csv(
 ):
     debug("\nPrinting summary CSV")
     summary = {}
-    for (item_name, _, _), tail in aggregated_data.items():
+    for (item_name, date, _), tail in aggregated_data.items():
         summary[item_name] = summary.get(
             item_name, CSV_Tail(ignore_fees=ignore_fees, sales_tax_rate=sales_tax)
         )
+        summary[item_name].date = datetime.datetime.strptime(date, "%Y-%m-%d")
         summary[item_name].csf_qty += tail.csf_qty
         summary[item_name].csf_price += tail.csf_price
         summary[item_name].scm_qty += tail.scm_qty
@@ -371,7 +380,7 @@ def write_casemove_csv(aggregated_data, output_file="output/casemove.csv"):
 def runner(
     input_file_dir=DATA_DIR,
     purchase_time_zone=PURCHASE_TIME_ZONE,
-    sales_tax=SALES_TAX,
+    sales_tax=SALES_TAX_RATES,
     ignore_fees=IGNORE_FEES,
 ):
     csf_file_names = sorted(
