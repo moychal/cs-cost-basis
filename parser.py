@@ -310,15 +310,19 @@ def write_summary_csv(
     summary = {}
     for (item_name, date, _), tail in aggregated_data.items():
         summary[item_name] = summary.get(
-            item_name, CSV_Tail(ignore_fees=ignore_fees, sales_tax_rate=sales_tax)
+            item_name,
+            defaultdict(
+                total_qty=0, subtotal=0, stripe_fee=0, sales_tax=0, total_cost=0
+            ),
         )
-        summary[item_name].date = datetime.datetime.strptime(date, "%Y-%m-%d")
-        summary[item_name].csf_qty += tail.csf_qty
-        summary[item_name].csf_price += tail.csf_price
-        summary[item_name].scm_qty += tail.scm_qty
-        summary[item_name].scm_price += tail.scm_price
-        summary[item_name].skinport_qty += tail.skinport_qty
-        summary[item_name].skinport_price += tail.skinport_price
+        subtotal = tail.csf_price + tail.scm_price + tail.skinport_price
+        summary[item_name]["total_qty"] += (
+            tail.csf_qty + tail.scm_qty + tail.skinport_qty
+        )
+        summary[item_name]["subtotal"] += subtotal
+        summary[item_name]["stripe_fee"] += tail.stripe_fee
+        summary[item_name]["sales_tax"] += tail.sales_tax
+        summary[item_name]["total_cost"] += subtotal + tail.stripe_fee + tail.sales_tax
 
     with open(output_file, "w", encoding="utf-8") as file:
         writer = csv.writer(file)
@@ -335,16 +339,19 @@ def write_summary_csv(
         ]
         writer.writerow(header)
 
-        for item_name, tail in sorted(summary.items(), key=lambda x: x[1].total_cost):
+        for item_name, tail in sorted(
+            summary.items(), key=lambda x: x[1]["total_cost"]
+        ):
             row = [
                 item_name,
-                tail.total_qty,
-                tail.subtotal / 100,
-                tail.subtotal / tail.total_qty / 100,
-                tail.stripe_fee / 100,
-                tail.sales_tax / 100,
-                tail.total_cost / 100,
-                tail.cost_basis / 100,
+                tail["total_qty"],
+                tail["subtotal"] / 100,
+                # we could aggregate these in the above summary block
+                tail["subtotal"] / tail["total_qty"] / 100,
+                tail["stripe_fee"] / 100,
+                tail["sales_tax"] / 100,
+                tail["total_cost"] / 100,
+                tail["total_cost"] / tail["total_qty"] / 100,
             ]
             writer.writerow(row)
 

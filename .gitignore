@@ -1,5 +1,6 @@
 __pycache__/
 data/**
 latest/**
+2025_data/**
 output/**/*.csv
 test/output/**/*.csv
